@@ -16,6 +16,18 @@
     NSURL *url = [NSURL URLWithString:urlString];
     //2.NSURLRequest
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    //参数
+    NSMutableString *str = [NSMutableString stringWithFormat:@"token=%@&user_id=%@&version=%@",@"",@"",@"4.32"];
+    for (int i=0; i<params.allKeys.count; i++) {
+        NSString *key = params.allKeys[i];
+
+        [str appendFormat:@"&%@=%@",key, params[key]];
+    }
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = data;
+    
     //3.NSURLSession
     NSURLSession *session = [NSURLSession sharedSession];
     //4.task

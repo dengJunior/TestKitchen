@@ -84,6 +84,8 @@
 		4E4765731CAF7597003147F5 /* shop_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E47655B1CAF7597003147F5 /* shop_normal@3x.png */; };
 		4E4765741CAF7597003147F5 /* shop_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E47655C1CAF7597003147F5 /* shop_select@2x.png */; };
 		4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E47655D1CAF7597003147F5 /* shop_select@3x.png */; };
+		4E4765781CAF7BC3003147F5 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765771CAF7BC3003147F5 /* RecommendModel.m */; };
+		4E47657B1CAF87DC003147F5 /* RecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47657A1CAF87DC003147F5 /* RecommendView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +245,10 @@
 		4E47655B1CAF7597003147F5 /* shop_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_normal@3x.png"; sourceTree = "<group>"; };
 		4E47655C1CAF7597003147F5 /* shop_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_select@2x.png"; sourceTree = "<group>"; };
 		4E47655D1CAF7597003147F5 /* shop_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_select@3x.png"; sourceTree = "<group>"; };
+		4E4765761CAF7BC3003147F5 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		4E4765771CAF7BC3003147F5 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
+		4E4765791CAF87DC003147F5 /* RecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendView.h; sourceTree = "<group>"; };
+		4E47657A1CAF87DC003147F5 /* RecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -692,6 +698,8 @@
 		4E47651E1CAF6C86003147F5 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4E4765761CAF7BC3003147F5 /* RecommendModel.h */,
+				4E4765771CAF7BC3003147F5 /* RecommendModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -699,6 +707,8 @@
 		4E47651F1CAF6C86003147F5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E4765791CAF87DC003147F5 /* RecommendView.h */,
+				4E47657A1CAF87DC003147F5 /* RecommendView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -978,6 +988,7 @@
 				4E4764D21CAEAC71003147F5 /* JSONValueTransformer.m in Sources */,
 				4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */,
 				4E4764D91CAEAC71003147F5 /* SDWebImageDownloaderOperation.m in Sources */,
+				4E47657B1CAF87DC003147F5 /* RecommendView.m in Sources */,
 				4E4764C91CAEAC71003147F5 /* JSONModel.m in Sources */,
 				4E4764D51CAEAC71003147F5 /* SDImageCache.m in Sources */,
 				4E4764D11CAEAC71003147F5 /* JSONKeyMapper.m in Sources */,
@@ -1001,6 +1012,7 @@
 				4E4764581CAEA61C003147F5 /* main.m in Sources */,
 				4E4764DB1CAEAC71003147F5 /* SDWebImagePrefetcher.m in Sources */,
 				4E4764DC1CAEAC71003147F5 /* UIButton+WebCache.m in Sources */,
+				4E4765781CAF7BC3003147F5 /* RecommendModel.m in Sources */,
 				4E4764DE1CAEAC71003147F5 /* UIImage+MultiFormat.m in Sources */,
 				4E4765031CAEAC9C003147F5 /* NSArray+MASAdditions.m in Sources */,
 				4E4764D71CAEAC71003147F5 /* SDWebImageDecoder.m in Sources */,
