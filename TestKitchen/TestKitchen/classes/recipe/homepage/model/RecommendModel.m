@@ -34,5 +34,10 @@
 
 @implementation RecommendWidgetDataModel
 
++(JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"id":@"wId"}];
+}
+
 
 @end

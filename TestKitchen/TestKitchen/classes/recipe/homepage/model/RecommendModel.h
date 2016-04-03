@@ -36,13 +36,13 @@
 
 @interface RecommendDataBannerModel : JSONModel
 
-@property (nonatomic,strong)NSNumber<Optional> *bannerId;
-@property (nonatomic,copy)NSString<Optional> *bannerTitle;
-@property (nonatomic,copy)NSString<Optional> *bannerPicture;
-@property (nonatomic,copy)NSString<Optional> *bannerLink;
-@property (nonatomic,strong)NSNumber<Optional> *isLink;
-@property (nonatomic,strong)NSNumber<Optional> *typeId;
-@property (nonatomic,strong)NSNumber<Optional> *referKey;
+@property (nonatomic,strong)NSNumber<Optional> *banner_id;
+@property (nonatomic,copy)NSString<Optional> *banner_title;
+@property (nonatomic,copy)NSString<Optional> *banner_picture;
+@property (nonatomic,copy)NSString<Optional> *banner_link;
+@property (nonatomic,strong)NSNumber<Optional> *is_link;
+@property (nonatomic,strong)NSNumber<Optional> *type_id;
+@property (nonatomic,strong)NSNumber<Optional> *refer_key;
 
 
 
@@ -50,12 +50,12 @@
 
 @interface RecommendDataWidgetListModel : JSONModel
 
-@property (nonatomic,strong)NSNumber<Optional> *widgetId;
-@property (nonatomic,strong)NSNumber<Optional> *widgetType;
+@property (nonatomic,strong)NSNumber<Optional> *widget_id;
+@property (nonatomic,strong)NSNumber<Optional> *widget_type;
 @property (nonatomic,copy)NSString<Optional> *title;
-@property (nonatomic,copy)NSString<Optional> *titleLink;
+@property (nonatomic,copy)NSString<Optional> *title_link;
 @property (nonatomic,copy)NSString<Optional> *desc;
-@property (nonatomic,strong)NSArray<Optional,RecommendWidgetDataModel> *widgetData;
+@property (nonatomic,strong)NSArray<Optional,RecommendWidgetDataModel> *widget_data;
 
 @end
 

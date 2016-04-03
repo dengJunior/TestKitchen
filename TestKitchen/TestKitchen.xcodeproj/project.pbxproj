@@ -86,6 +86,10 @@
 		4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E47655D1CAF7597003147F5 /* shop_select@3x.png */; };
 		4E4765781CAF7BC3003147F5 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765771CAF7BC3003147F5 /* RecommendModel.m */; };
 		4E47657B1CAF87DC003147F5 /* RecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47657A1CAF87DC003147F5 /* RecommendView.m */; };
+		4E47657F1CAFD982003147F5 /* RecommendADCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47657D1CAFD982003147F5 /* RecommendADCell.m */; };
+		4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E47657E1CAFD982003147F5 /* RecommendADCell.xib */; };
+		4E4765841CAFDA0E003147F5 /* RecommendLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765821CAFDA0E003147F5 /* RecommendLikeCell.m */; };
+		4E4765851CAFDA0E003147F5 /* RecommendLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4765831CAFDA0E003147F5 /* RecommendLikeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +253,12 @@
 		4E4765771CAF7BC3003147F5 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		4E4765791CAF87DC003147F5 /* RecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendView.h; sourceTree = "<group>"; };
 		4E47657A1CAF87DC003147F5 /* RecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendView.m; sourceTree = "<group>"; };
+		4E47657C1CAFD982003147F5 /* RecommendADCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendADCell.h; sourceTree = "<group>"; };
+		4E47657D1CAFD982003147F5 /* RecommendADCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendADCell.m; sourceTree = "<group>"; };
+		4E47657E1CAFD982003147F5 /* RecommendADCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendADCell.xib; sourceTree = "<group>"; };
+		4E4765811CAFDA0E003147F5 /* RecommendLikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLikeCell.h; sourceTree = "<group>"; };
+		4E4765821CAFDA0E003147F5 /* RecommendLikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendLikeCell.m; sourceTree = "<group>"; };
+		4E4765831CAFDA0E003147F5 /* RecommendLikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendLikeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,6 +719,12 @@
 			children = (
 				4E4765791CAF87DC003147F5 /* RecommendView.h */,
 				4E47657A1CAF87DC003147F5 /* RecommendView.m */,
+				4E47657C1CAFD982003147F5 /* RecommendADCell.h */,
+				4E47657D1CAFD982003147F5 /* RecommendADCell.m */,
+				4E47657E1CAFD982003147F5 /* RecommendADCell.xib */,
+				4E4765811CAFDA0E003147F5 /* RecommendLikeCell.h */,
+				4E4765821CAFDA0E003147F5 /* RecommendLikeCell.m */,
+				4E4765831CAFDA0E003147F5 /* RecommendLikeCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -923,6 +939,7 @@
 				4E4765621CAF7597003147F5 /* home_normal@2x.png in Resources */,
 				4E4764661CAEA61C003147F5 /* LaunchScreen.storyboard in Resources */,
 				4E4765611CAF7597003147F5 /* community_select@3x.png in Resources */,
+				4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */,
 				4E4765691CAF7597003147F5 /* mine_select@3x.png in Resources */,
 				4E47656C1CAF7597003147F5 /* report_select@2x.png in Resources */,
 				4E4765681CAF7597003147F5 /* mine_select@2x.png in Resources */,
@@ -944,6 +961,7 @@
 				4E47656E1CAF7597003147F5 /* shike_normal@2x.png in Resources */,
 				4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */,
 				4E4765601CAF7597003147F5 /* community_select@2x.png in Resources */,
+				4E4765851CAFDA0E003147F5 /* RecommendLikeCell.xib in Resources */,
 				4E47656F1CAF7597003147F5 /* shike_normal@3x.png in Resources */,
 				4E47656B1CAF7597003147F5 /* report_normal@3x.png in Resources */,
 				4E4764611CAEA61C003147F5 /* Main.storyboard in Resources */,
@@ -976,6 +994,7 @@
 				4E4764DF1CAEAC71003147F5 /* UIImage+WebP.m in Sources */,
 				4E4764CA1CAEAC71003147F5 /* JSONModelArray.m in Sources */,
 				4E4764CC1CAEAC71003147F5 /* JSONModelError.m in Sources */,
+				4E4765841CAFDA0E003147F5 /* RecommendLikeCell.m in Sources */,
 				4E4764FD1CAEAC9C003147F5 /* MASCompositeConstraint.m in Sources */,
 				4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */,
 				4E4764FF1CAEAC9C003147F5 /* MASConstraintMaker.m in Sources */,
@@ -1000,6 +1019,7 @@
 				4E4765361CAF6D09003147F5 /* FoodViewController.m in Sources */,
 				4E4765391CAF6D22003147F5 /* ShoppingMallViewController.m in Sources */,
 				4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */,
+				4E47657F1CAFD982003147F5 /* RecommendADCell.m in Sources */,
 				4E4764DA1CAEAC71003147F5 /* SDWebImageManager.m in Sources */,
 				4E4764D81CAEAC71003147F5 /* SDWebImageDownloader.m in Sources */,
 				4E4765011CAEAC9C003147F5 /* MASViewAttribute.m in Sources */,

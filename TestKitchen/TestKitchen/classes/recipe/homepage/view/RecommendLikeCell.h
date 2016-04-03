@@ -1,5 +1,5 @@
 //
-//  RecommendView.h
+//  RecommendLikeCell.h
 //  TestKitchen
 //
 //  Created by gaokunpeng on 16/4/2.
@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class RecommendModel;
-@interface RecommendView : UIView
+@class RecommendDataWidgetListModel;
+@interface RecommendLikeCell : UITableViewCell
 
-@property (nonatomic,strong)RecommendModel *rModel;
+@property (nonatomic,strong)RecommendDataWidgetListModel *model;
+
+- (IBAction)clickBtn:(UIButton *)sender;
+
 
 //点击事件
 @property (nonatomic,strong)void (^clickBlock)(NSString *urlString,LinkType type);

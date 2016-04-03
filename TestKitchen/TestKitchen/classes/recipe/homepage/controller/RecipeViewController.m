@@ -10,7 +10,7 @@
 #import "RecommendModel.h"
 #import "RecommendView.h"
 
-@interface RecipeViewController ()
+@interface RecipeViewController ()<UIScrollViewDelegate>
 
 
 @property (nonatomic,strong)UIScrollView *scrollView;
@@ -21,8 +21,10 @@
 @property (nonatomic,strong)RecommendView *recommendView;
 
 //首页食材
+@property (nonatomic,strong)UIView *materialView;
 
 //首页分类
+@property (nonatomic,strong)UIView *categoryView;
 
 
 
@@ -35,6 +37,7 @@
     // Do any additional setup after loading the view.
     
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //首页视图
     [self createHomePageView];
     
@@ -50,32 +53,55 @@
     
     WS(ws)
     self.scrollView = [[UIScrollView alloc] init];
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];
+    //约束
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(ws.view).with.insets(UIEdgeInsetsMake(64, 0, 49, 0));
+    }];
+
     
     UIView *container = [KTCUtil createUIView];
+    container.backgroundColor = [UIColor redColor];
     [self.scrollView addSubview:container];
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(ws.scrollView);
+        //高度一定要设置
+        make.height.equalTo(ws.scrollView.mas_height);
     }];
-    
-   
-    //约束
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(ws).with.insets(UIEdgeInsetsMake(64, 0, 49, 0));
-    }];
-    
+
     
     //首页推荐
     self.recommendView = [[RecommendView alloc] init];
+    self.recommendView.backgroundColor = [UIColor orangeColor];
     [container addSubview:self.recommendView];
     [self.recommendView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.bottom.and.left.equalTo(container);
         make.width.mas_equalTo(kScreenW);
     }];
     
+    //首页食材
+    self.materialView = [[UIView alloc] init];
+    [container addSubview:self.materialView];
+    [self.materialView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.and.bottom.equalTo(container);
+        make.width.mas_equalTo(kScreenW);
+        make.left.equalTo(self.recommendView.mas_right);
+    }];
+    
+    //首页分类
+    self.categoryView = [[UIView alloc] init];
+    [container addSubview:self.categoryView];
+    [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.and.bottom.equalTo(container);
+        make.width.mas_equalTo(kScreenW);
+        make.left.equalTo(self.materialView.mas_right);
+    }];
+    
     
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(ws.recommendView.mas_right);
+        make.right.equalTo(ws.categoryView.mas_right);
     }];
     
     
@@ -102,6 +128,11 @@
 
 - (void)showRecommendView
 {
+    //点击事件
+    self.recommendView.clickBlock = ^(NSString *urlString, LinkType type){
+    
+    };
+    
     self.recommendView.rModel = self.recommendModel;
 }
 
@@ -109,6 +140,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - 界面跳转
+
 
 /*
 #pragma mark - Navigation

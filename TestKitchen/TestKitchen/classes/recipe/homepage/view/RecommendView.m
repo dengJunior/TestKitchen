@@ -8,6 +8,8 @@
 
 #import "RecommendView.h"
 #import "RecommendModel.h"
+#import "RecommendADCell.h"
+#import "RecommendLikeCell.h"
 
 @interface RecommendView ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -18,7 +20,7 @@
 
 @implementation RecommendView
 
--(instancetype)init
+- (instancetype)init
 {
     if (self = [super init]) {
         
@@ -44,19 +46,14 @@
     _rModel = rModel;
     
     [self.tbView reloadData];
+    
 }
 
 #pragma mark - UITableView代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSInteger sections = 0;
-    if (self.rModel.data.banner.count > 0) {
-        sections = 1;
-    }
-    
-    sections += self.rModel.data.widgetList.count;
-    
-    return sections;
+    //广告占一行
+    return 1+self.rModel.data.widgetList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -74,7 +71,7 @@
     }
     
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widgetType.intValue == 1) {
+    if (listModel.widget_type.intValue == 1) {
         //猜你喜欢
         rowNum = 1;
     }
@@ -86,7 +83,7 @@
 {
     CGFloat h = 0;
     if (indexPath.section == 0 && self.rModel.data.banner.count > 0) {
-        h = 160;
+        h = 120;
         return h;
     }
     
@@ -96,21 +93,23 @@
     }
     
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widgetType.intValue == 1) {
+    if (listModel.widget_type.intValue == 1) {
         //猜你喜欢
         h = 120;
     }
 
-    
     return h;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     UITableViewCell *cell = nil;
-    
+
     if (indexPath.section == 0 && self.rModel.data.banner.count > 0) {
         cell = [self createAdCellForTableView:tableView atIndexPath:indexPath];
+        return cell;
     }
     
     NSInteger secIndex = indexPath.section;
@@ -119,7 +118,7 @@
     }
     
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widgetType.intValue == 1) {
+    if (listModel.widget_type.intValue == 1) {
         //猜你喜欢
         cell = [self createLikeCellForTableView:tableView atIndexPath:indexPath];
     }
@@ -130,12 +129,43 @@
 
 - (UITableViewCell *)createAdCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    static NSString *cellId = @"adCellId";
+    
+    RecommendADCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RecommendADCell" owner:nil options:nil] lastObject];
+    }
+    
+    //点击事件
+    cell.clickBlock = self.clickBlock;
+    
+    cell.bannerArray = self.rModel.data.banner;
+    
+    return cell;
 }
 
 - (UITableViewCell *)createLikeCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    
+    static NSString *cellId = @"likeCellId";
+    
+    RecommendLikeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RecommendLikeCell" owner:nil options:nil] lastObject];
+    }
+    
+    //点击事件
+    cell.clickBlock = self.clickBlock;
+    
+    NSInteger secIndex = indexPath.section;
+    if (self.rModel.data.banner.count > 0) {
+        secIndex--;
+    }
+    
+    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
+    cell.model = listModel;
+    
+    return cell;
 }
 
 
