@@ -60,5 +60,31 @@
     return aView;
 }
 
++(UITextField *)createTextField:(NSString *)placeHolder leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName
+{
+    UITextField *textField = [[UITextField alloc] init];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = placeHolder;
+    
+    if (leftImageName) {
+        UIImageView *leftImageView = [self createImageView:leftImageName];
+        leftImageView.frame = CGRectMake(4, 4, 16, 16);
+        textField.leftViewMode = UITextFieldViewModeAlways;
+        textField.leftView = leftImageView;
+    }
+    
+    if (rightImageName) {
+        UIImageView *rightImageView = [self createImageView:rightImageName];
+        rightImageView.frame = CGRectMake(4, 4, 16, 16);
+        textField.leftViewMode = UITextFieldViewModeAlways;
+        textField.leftView = rightImageView;
+    }
+
+    
+    return textField;
+}
+
+
+
 
 @end

@@ -19,6 +19,8 @@
 + (UIImageView *)createImageView:(NSString *)imageName;
 //创建视图
 + (UIView *)createUIView;
+//文本输入框
++ (UITextField *)createTextField:(NSString *)placeHolder leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName;
 
 
 

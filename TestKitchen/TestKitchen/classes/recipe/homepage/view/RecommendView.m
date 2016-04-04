@@ -10,8 +10,10 @@
 #import "RecommendModel.h"
 #import "RecommendADCell.h"
 #import "RecommendLikeCell.h"
+#import "LikeHeaderView.h"
+#import "FoodRecordCell.h"
 
-@interface RecommendView ()<UITableViewDataSource,UITableViewDelegate>
+@interface RecommendView ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
 //表格
 @property (nonatomic,strong)UITableView *tbView;
@@ -29,6 +31,7 @@
         self.tbView.delegate = self;
         self.tbView.dataSource = self;
         [self addSubview:self.tbView];
+    
         
         //约束
         WS(ws)
@@ -71,8 +74,9 @@
     }
     
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widget_type.intValue == 1) {
-        //猜你喜欢
+    if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 2) {
+        //1----猜你喜欢
+        //2----红包入口
         rowNum = 1;
     }
     
@@ -95,12 +99,81 @@
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
     if (listModel.widget_type.intValue == 1) {
         //猜你喜欢
-        h = 120;
+        h = 100;
+    }else if (listModel.widget_type.intValue == 2){
+        //红包入口
+        h = 80;
     }
 
     return h;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    CGFloat h = 0;
+    
+    RecommendDataWidgetListModel *listModel = nil;
+    if (self.rModel.data.banner.count > 0) {
+        if (section > 0) {
+            listModel = self.rModel.data.widgetList[section-1];
+        }        
+    }else{
+        listModel = self.rModel.data.widgetList[section];
+    }
+    
+    if (listModel.widget_type.intValue == 1) {
+        //猜你喜欢
+        h = 44;
+    }
+    return h;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = nil;
+    RecommendDataWidgetListModel *listModel = nil;
+    if (self.rModel.data.banner.count > 0 && section > 0) {
+        listModel = self.rModel.data.widgetList[section-1];
+    }else{
+        listModel = self.rModel.data.widgetList[section];
+    }
+    
+    if (listModel.widget_type.intValue == 1) {
+        //猜你喜欢
+        view = [self createLikeHeaderView];
+    }
+
+    
+    return view;
+}
+
+
+//猜你喜欢的表头
+- (UIView *)createLikeHeaderView
+{
+    /*
+     这种方式实现时搜索框会有灰色的背景颜色
+    UIView *bgView = [KTCUtil createUIView];
+    bgView.frame = CGRectMake(0, 0, kScreenW, 44);
+    bgView.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
+    
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.barStyle = UIBarStyleDefault;
+    searchBar.placeholder = @"输入菜名或食材搜索";
+    searchBar.delegate = self;
+    [bgView addSubview:searchBar];
+    
+    [searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(bgView).with.insets(UIEdgeInsetsMake(0, 40, 0, 40));
+    }];
+     */
+    
+    LikeHeaderView *headerView = [[LikeHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 44)];
+
+    
+    return headerView;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -108,6 +181,7 @@
     UITableViewCell *cell = nil;
 
     if (indexPath.section == 0 && self.rModel.data.banner.count > 0) {
+        //广告
         cell = [self createAdCellForTableView:tableView atIndexPath:indexPath];
         return cell;
     }
@@ -121,12 +195,18 @@
     if (listModel.widget_type.intValue == 1) {
         //猜你喜欢
         cell = [self createLikeCellForTableView:tableView atIndexPath:indexPath];
+    }else if (listModel.widget_type.intValue == 2){
+        //红包入口
+        cell = [self createFoodRecordCellForTableView:tableView atIndexPath:indexPath];
     }
     
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
 }
 
+//广告
 - (UITableViewCell *)createAdCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellId = @"adCellId";
@@ -144,6 +224,7 @@
     return cell;
 }
 
+//猜你喜欢
 - (UITableViewCell *)createLikeCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -164,6 +245,30 @@
     
     RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
     cell.model = listModel;
+    
+    return cell;
+}
+
+//红包入口
+- (UITableViewCell *)createFoodRecordCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"foodRecordCellId";
+    
+    FoodRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"FoodRecordCell" owner:nil options:nil] lastObject];
+    }
+    
+    //点击事件
+    cell.clickBlock = self.clickBlock;
+    //显示数据
+    NSInteger secIndex = indexPath.section;
+    if (self.rModel.data.banner.count > 0) {
+        secIndex--;
+    }
+    
+    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
+    cell.listModel = listModel;
     
     return cell;
 }
