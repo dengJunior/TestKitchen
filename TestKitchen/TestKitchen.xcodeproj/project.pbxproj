@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1414551CB38615002DB02C /* DailyMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414531CB38615002DB02C /* DailyMenuCell.m */; };
+		4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414541CB38615002DB02C /* DailyMenuCell.xib */; };
 		4E4764581CAEA61C003147F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4764571CAEA61C003147F5 /* main.m */; };
 		4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645A1CAEA61C003147F5 /* AppDelegate.m */; };
 		4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645D1CAEA61C003147F5 /* ViewController.m */; };
@@ -116,6 +118,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1414521CB38615002DB02C /* DailyMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyMenuCell.h; sourceTree = "<group>"; };
+		4E1414531CB38615002DB02C /* DailyMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyMenuCell.m; sourceTree = "<group>"; };
+		4E1414541CB38615002DB02C /* DailyMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyMenuCell.xib; sourceTree = "<group>"; };
 		4E4764531CAEA61C003147F5 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4764571CAEA61C003147F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E4764591CAEA61C003147F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -732,6 +737,9 @@
 		4E47651F1CAF6C86003147F5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E1414521CB38615002DB02C /* DailyMenuCell.h */,
+				4E1414531CB38615002DB02C /* DailyMenuCell.m */,
+				4E1414541CB38615002DB02C /* DailyMenuCell.xib */,
 				4E4765791CAF87DC003147F5 /* RecommendView.h */,
 				4E47657A1CAF87DC003147F5 /* RecommendView.m */,
 				4E47657C1CAFD982003147F5 /* RecommendADCell.h */,
@@ -963,6 +971,7 @@
 				4E4765621CAF7597003147F5 /* home_normal@2x.png in Resources */,
 				4E4764661CAEA61C003147F5 /* LaunchScreen.storyboard in Resources */,
 				4E4765611CAF7597003147F5 /* community_select@3x.png in Resources */,
+				4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */,
 				4E47658F1CB21DD8003147F5 /* FoodRecordCell.xib in Resources */,
 				4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */,
 				4E4765691CAF7597003147F5 /* mine_select@3x.png in Resources */,
@@ -1050,6 +1059,7 @@
 				4E47657F1CAFD982003147F5 /* RecommendADCell.m in Sources */,
 				4E4764DA1CAEAC71003147F5 /* SDWebImageManager.m in Sources */,
 				4E4764D81CAEAC71003147F5 /* SDWebImageDownloader.m in Sources */,
+				4E1414551CB38615002DB02C /* DailyMenuCell.m in Sources */,
 				4E4765011CAEAC9C003147F5 /* MASViewAttribute.m in Sources */,
 				4E4764FE1CAEAC9C003147F5 /* MASConstraint.m in Sources */,
 				4E4764E11CAEAC71003147F5 /* UIImageView+WebCache.m in Sources */,

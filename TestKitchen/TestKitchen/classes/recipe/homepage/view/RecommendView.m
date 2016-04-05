@@ -12,6 +12,8 @@
 #import "RecommendLikeCell.h"
 #import "LikeHeaderView.h"
 #import "FoodRecordCell.h"
+#import "DailyMenuCell.h"
+#import "RecommendHeaderView.h"
 
 @interface RecommendView ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
@@ -62,23 +64,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger rowNum = 0;
-    if (section == 0 && self.rModel.data.banner.count > 0) {
+    if (section == 0) {
         //广告
-        rowNum = 1;
-        return rowNum;
+        if (self.rModel.data.banner.count > 0) {
+            rowNum = 1;
+        }
+    }else{
+        RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[section-1];
+        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 2 || listModel.widget_type.intValue == 5) {
+            //1----猜你喜欢
+            //2----红包入口
+            rowNum = 1;
+        }
     }
     
-    NSInteger secIndex = section;
-    if (self.rModel.data.banner.count > 0) {
-        secIndex--;
-    }
     
-    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 2) {
-        //1----猜你喜欢
-        //2----红包入口
-        rowNum = 1;
-    }
     
     return rowNum;
 }
@@ -86,24 +86,25 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat h = 0;
-    if (indexPath.section == 0 && self.rModel.data.banner.count > 0) {
-        h = 120;
-        return h;
+    if (indexPath.section == 0 ) {
+        if (self.rModel.data.banner.count > 0) {
+            h = 120;
+        }
+    }else{
+        RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[indexPath.section];
+        if (listModel.widget_type.intValue == 1) {
+            //猜你喜欢
+            h = 100;
+        }else if (listModel.widget_type.intValue == 2){
+            //红包入口
+            h = 80;
+        }else if (listModel.widget_type.intValue == 5){
+            //今日新品
+            h = 260;
+        }
     }
     
-    NSInteger secIndex = indexPath.section;
-    if (self.rModel.data.banner.count > 0) {
-        secIndex--;
-    }
     
-    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widget_type.intValue == 1) {
-        //猜你喜欢
-        h = 100;
-    }else if (listModel.widget_type.intValue == 2){
-        //红包入口
-        h = 80;
-    }
 
     return h;
 }
@@ -112,36 +113,37 @@
 {
     CGFloat h = 0;
     
-    RecommendDataWidgetListModel *listModel = nil;
-    if (self.rModel.data.banner.count > 0) {
-        if (section > 0) {
-            listModel = self.rModel.data.widgetList[section-1];
-        }        
-    }else{
-        listModel = self.rModel.data.widgetList[section];
+    if (section > 0) {
+        RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[section-1];
+        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 5) {
+            //1----猜你喜欢
+            //5----今日推荐
+            h = 44;
+        }
     }
     
-    if (listModel.widget_type.intValue == 1) {
-        //猜你喜欢
-        h = 44;
-    }
+    
+    
+    
     return h;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *view = nil;
-    RecommendDataWidgetListModel *listModel = nil;
-    if (self.rModel.data.banner.count > 0 && section > 0) {
-        listModel = self.rModel.data.widgetList[section-1];
-    }else{
-        listModel = self.rModel.data.widgetList[section];
+    if (section > 0) {
+        RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[section-1];
+        if (listModel.widget_type.intValue == 1) {
+            //猜你喜欢
+            view = [self createLikeHeaderView];
+        }else if (listModel.widget_type.intValue == 5) {
+            //今日新品
+            view = [[RecommendHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 44) title:@"今日新品"];
+        }
     }
     
-    if (listModel.widget_type.intValue == 1) {
-        //猜你喜欢
-        view = [self createLikeHeaderView];
-    }
+    
+    
 
     
     return view;
@@ -180,30 +182,41 @@
 
     UITableViewCell *cell = nil;
 
-    if (indexPath.section == 0 && self.rModel.data.banner.count > 0) {
-        //广告
-        cell = [self createAdCellForTableView:tableView atIndexPath:indexPath];
-        return cell;
-    }
-    
-    NSInteger secIndex = indexPath.section;
-    if (self.rModel.data.banner.count > 0) {
-        secIndex--;
-    }
-    
-    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[secIndex];
-    if (listModel.widget_type.intValue == 1) {
-        //猜你喜欢
-        cell = [self createLikeCellForTableView:tableView atIndexPath:indexPath];
-    }else if (listModel.widget_type.intValue == 2){
-        //红包入口
-        cell = [self createFoodRecordCellForTableView:tableView atIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        if (self.rModel.data.banner.count > 0) {
+            //广告
+            cell = [self createAdCellForTableView:tableView atIndexPath:indexPath];
+        }
+    }else{
+        RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[indexPath.section-1];
+        if (listModel.widget_type.intValue == 1) {
+            //猜你喜欢
+            cell = [self createLikeCellForTableView:tableView atIndexPath:indexPath];
+        }else if (listModel.widget_type.intValue == 2){
+            //红包入口
+            cell = [self createFoodRecordCellForTableView:tableView atIndexPath:indexPath];
+        }else if (listModel.widget_type.intValue == 5) {
+            //今日新品
+            cell = [self createDailyMenuCellForTableView:tableView atIndexPath:indexPath];
+        }
     }
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
     
+}
+
+//今日新品
+- (UITableViewCell *)createDailyMenuCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"dailyMenuCellId";
+    DailyMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"DailyMenuCell" owner:nil options:nil] lastObject];
+    }
+    
+    return cell;
 }
 
 //广告
