@@ -24,6 +24,10 @@ typedef NS_ENUM(NSInteger, LinkType){
     LinkTypeFoodMatch,                   //食材搭配
     LinkTypeSceneList,                   //场景菜谱
     LinkTypeFavorites,                   //猜你喜欢
+    LinkTypeDish,                        //
+    LinkTypeVideo,                       //视频播放
+    LinkTypeScene,                       //场景
+    LinkTypeTalent,                      //推荐达人
 };
 
 

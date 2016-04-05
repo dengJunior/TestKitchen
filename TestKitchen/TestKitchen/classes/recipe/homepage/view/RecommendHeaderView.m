@@ -21,21 +21,30 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        //背景白色视图
-        UIView *bgView = [KTCUtil createUIView];
+        //白色背景
+        UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 8, kScreenW, 36)];
         bgView.backgroundColor = [UIColor whiteColor];
-        bgView.frame = CGRectMake(0, 16, kScreenW, 28);
         [self addSubview:bgView];
         
         //文字
-        self.titleLabel = [KTCUtil createLabelText:nil font:[UIFont systemFontOfSize:20] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentRight];
-        self.titleLabel.frame = CGRectMake(kScreenW-280, 0, 160, 28);
-        [bgView addSubview:self.titleLabel];
+        //宽度
+        CGFloat w = [title boundingRectWithSize:CGSizeMake(320, 36) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:20]} context:nil].size.width;
+        
+        //200
+        //20+20
+        CGFloat x = (kScreenW-w-20-20)/2;
+        
+        UILabel *titleLabel = [KTCUtil createLabelText:title font:[UIFont systemFontOfSize:20] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentRight];
+        titleLabel.frame = CGRectMake(x, 0, w, 36);
+        [bgView addSubview:titleLabel];
         
         //图片
-        UIImageView *imgView = [KTCUtil createImageView:@"more_icon"];
-        imgView.frame = CGRectMake(kScreenW-80, 0, 40, 40);
-        [bgView addSubview:imgView];
+        UIImageView *rightImageView = [KTCUtil createImageView:@"more_icon"];
+        rightImageView.frame = CGRectMake(x+w+20, 8, 20, 20);
+        [bgView addSubview:rightImageView];
+        
+        
+        self.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
         
         
     }

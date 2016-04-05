@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		4E1414551CB38615002DB02C /* DailyMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414531CB38615002DB02C /* DailyMenuCell.m */; };
 		4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414541CB38615002DB02C /* DailyMenuCell.xib */; };
+		4E14145C1CB39EF3002DB02C /* play-A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14145A1CB39EF3002DB02C /* play-A@2x.png */; };
+		4E14145D1CB39EF3002DB02C /* play-A@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14145B1CB39EF3002DB02C /* play-A@3x.png */; };
+		4E1414611CB3A951002DB02C /* RecommendSceneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14145F1CB3A951002DB02C /* RecommendSceneCell.m */; };
+		4E1414621CB3A951002DB02C /* RecommendSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414601CB3A951002DB02C /* RecommendSceneCell.xib */; };
+		4E1414661CB3BD13002DB02C /* RecommendSceneListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414641CB3BD13002DB02C /* RecommendSceneListCell.m */; };
+		4E1414671CB3BD13002DB02C /* RecommendSceneListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414651CB3BD13002DB02C /* RecommendSceneListCell.xib */; };
+		4E14146B1CB3BFAB002DB02C /* RecommendSoupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414691CB3BFAB002DB02C /* RecommendSoupCell.m */; };
+		4E14146C1CB3BFAB002DB02C /* RecommendSoupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E14146A1CB3BFAB002DB02C /* RecommendSoupCell.xib */; };
+		4E1414711CB3C3C6002DB02C /* icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14146D1CB3C3C6002DB02C /* icon_like@2x.png */; };
+		4E1414721CB3C3C6002DB02C /* icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14146E1CB3C3C6002DB02C /* icon_like@3x.png */; };
+		4E1414731CB3C3C6002DB02C /* icon_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14146F1CB3C3C6002DB02C /* icon_play@2x.png */; };
+		4E1414741CB3C3C6002DB02C /* icon_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414701CB3C3C6002DB02C /* icon_play@3x.png */; };
+		4E1414781CB3E34B002DB02C /* RecommendMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */; };
+		4E1414791CB3E34B002DB02C /* RecommendMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */; };
 		4E4764581CAEA61C003147F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4764571CAEA61C003147F5 /* main.m */; };
 		4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645A1CAEA61C003147F5 /* AppDelegate.m */; };
 		4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645D1CAEA61C003147F5 /* ViewController.m */; };
@@ -121,6 +135,24 @@
 		4E1414521CB38615002DB02C /* DailyMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyMenuCell.h; sourceTree = "<group>"; };
 		4E1414531CB38615002DB02C /* DailyMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyMenuCell.m; sourceTree = "<group>"; };
 		4E1414541CB38615002DB02C /* DailyMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyMenuCell.xib; sourceTree = "<group>"; };
+		4E14145A1CB39EF3002DB02C /* play-A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-A@2x.png"; sourceTree = "<group>"; };
+		4E14145B1CB39EF3002DB02C /* play-A@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-A@3x.png"; sourceTree = "<group>"; };
+		4E14145E1CB3A951002DB02C /* RecommendSceneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSceneCell.h; sourceTree = "<group>"; };
+		4E14145F1CB3A951002DB02C /* RecommendSceneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSceneCell.m; sourceTree = "<group>"; };
+		4E1414601CB3A951002DB02C /* RecommendSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendSceneCell.xib; sourceTree = "<group>"; };
+		4E1414631CB3BD13002DB02C /* RecommendSceneListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSceneListCell.h; sourceTree = "<group>"; };
+		4E1414641CB3BD13002DB02C /* RecommendSceneListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSceneListCell.m; sourceTree = "<group>"; };
+		4E1414651CB3BD13002DB02C /* RecommendSceneListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendSceneListCell.xib; sourceTree = "<group>"; };
+		4E1414681CB3BFAB002DB02C /* RecommendSoupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSoupCell.h; sourceTree = "<group>"; };
+		4E1414691CB3BFAB002DB02C /* RecommendSoupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSoupCell.m; sourceTree = "<group>"; };
+		4E14146A1CB3BFAB002DB02C /* RecommendSoupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendSoupCell.xib; sourceTree = "<group>"; };
+		4E14146D1CB3C3C6002DB02C /* icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_like@2x.png"; sourceTree = "<group>"; };
+		4E14146E1CB3C3C6002DB02C /* icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_like@3x.png"; sourceTree = "<group>"; };
+		4E14146F1CB3C3C6002DB02C /* icon_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_play@2x.png"; sourceTree = "<group>"; };
+		4E1414701CB3C3C6002DB02C /* icon_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_play@3x.png"; sourceTree = "<group>"; };
+		4E1414751CB3E34B002DB02C /* RecommendMasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendMasterCell.h; sourceTree = "<group>"; };
+		4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendMasterCell.m; sourceTree = "<group>"; };
+		4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendMasterCell.xib; sourceTree = "<group>"; };
 		4E4764531CAEA61C003147F5 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4764571CAEA61C003147F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E4764591CAEA61C003147F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -755,6 +787,18 @@
 				4E47658D1CB21DD8003147F5 /* FoodRecordCell.xib */,
 				4E4765901CB22FCC003147F5 /* RecommendHeaderView.h */,
 				4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */,
+				4E14145E1CB3A951002DB02C /* RecommendSceneCell.h */,
+				4E14145F1CB3A951002DB02C /* RecommendSceneCell.m */,
+				4E1414601CB3A951002DB02C /* RecommendSceneCell.xib */,
+				4E1414631CB3BD13002DB02C /* RecommendSceneListCell.h */,
+				4E1414641CB3BD13002DB02C /* RecommendSceneListCell.m */,
+				4E1414651CB3BD13002DB02C /* RecommendSceneListCell.xib */,
+				4E1414681CB3BFAB002DB02C /* RecommendSoupCell.h */,
+				4E1414691CB3BFAB002DB02C /* RecommendSoupCell.m */,
+				4E14146A1CB3BFAB002DB02C /* RecommendSoupCell.xib */,
+				4E1414751CB3E34B002DB02C /* RecommendMasterCell.h */,
+				4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */,
+				4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -828,6 +872,12 @@
 		4E4765271CAF6C91003147F5 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4E14146D1CB3C3C6002DB02C /* icon_like@2x.png */,
+				4E14146E1CB3C3C6002DB02C /* icon_like@3x.png */,
+				4E14146F1CB3C3C6002DB02C /* icon_play@2x.png */,
+				4E1414701CB3C3C6002DB02C /* icon_play@3x.png */,
+				4E14145A1CB39EF3002DB02C /* play-A@2x.png */,
+				4E14145B1CB39EF3002DB02C /* play-A@3x.png */,
 				4E4765931CB340A4003147F5 /* more_icon.png */,
 				4E4765891CB219DC003147F5 /* search1.png */,
 			);
@@ -971,10 +1021,15 @@
 				4E4765621CAF7597003147F5 /* home_normal@2x.png in Resources */,
 				4E4764661CAEA61C003147F5 /* LaunchScreen.storyboard in Resources */,
 				4E4765611CAF7597003147F5 /* community_select@3x.png in Resources */,
+				4E1414721CB3C3C6002DB02C /* icon_like@3x.png in Resources */,
 				4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */,
 				4E47658F1CB21DD8003147F5 /* FoodRecordCell.xib in Resources */,
+				4E1414711CB3C3C6002DB02C /* icon_like@2x.png in Resources */,
+				4E1414731CB3C3C6002DB02C /* icon_play@2x.png in Resources */,
 				4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */,
+				4E1414791CB3E34B002DB02C /* RecommendMasterCell.xib in Resources */,
 				4E4765691CAF7597003147F5 /* mine_select@3x.png in Resources */,
+				4E1414621CB3A951002DB02C /* RecommendSceneCell.xib in Resources */,
 				4E47656C1CAF7597003147F5 /* report_select@2x.png in Resources */,
 				4E4765681CAF7597003147F5 /* mine_select@2x.png in Resources */,
 				4E47656A1CAF7597003147F5 /* report_normal@2x.png in Resources */,
@@ -994,11 +1049,16 @@
 				4E4765721CAF7597003147F5 /* shop_normal@2x.png in Resources */,
 				4E4765641CAF7597003147F5 /* home_select@2x.png in Resources */,
 				4E47656E1CAF7597003147F5 /* shike_normal@2x.png in Resources */,
+				4E14145C1CB39EF3002DB02C /* play-A@2x.png in Resources */,
 				4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */,
+				4E1414741CB3C3C6002DB02C /* icon_play@3x.png in Resources */,
+				4E1414671CB3BD13002DB02C /* RecommendSceneListCell.xib in Resources */,
 				4E4765601CAF7597003147F5 /* community_select@2x.png in Resources */,
 				4E4765941CB340A4003147F5 /* more_icon.png in Resources */,
 				4E4765851CAFDA0E003147F5 /* RecommendLikeCell.xib in Resources */,
 				4E47656F1CAF7597003147F5 /* shike_normal@3x.png in Resources */,
+				4E14145D1CB39EF3002DB02C /* play-A@3x.png in Resources */,
+				4E14146C1CB3BFAB002DB02C /* RecommendSoupCell.xib in Resources */,
 				4E47656B1CAF7597003147F5 /* report_normal@3x.png in Resources */,
 				4E4764611CAEA61C003147F5 /* Main.storyboard in Resources */,
 			);
@@ -1031,6 +1091,7 @@
 				4E4764CA1CAEAC71003147F5 /* JSONModelArray.m in Sources */,
 				4E4764CC1CAEAC71003147F5 /* JSONModelError.m in Sources */,
 				4E4765841CAFDA0E003147F5 /* RecommendLikeCell.m in Sources */,
+				4E1414611CB3A951002DB02C /* RecommendSceneCell.m in Sources */,
 				4E4764FD1CAEAC9C003147F5 /* MASCompositeConstraint.m in Sources */,
 				4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */,
 				4E4764FF1CAEAC9C003147F5 /* MASConstraintMaker.m in Sources */,
@@ -1046,16 +1107,19 @@
 				4E47657B1CAF87DC003147F5 /* RecommendView.m in Sources */,
 				4E4764C91CAEAC71003147F5 /* JSONModel.m in Sources */,
 				4E4764D51CAEAC71003147F5 /* SDImageCache.m in Sources */,
+				4E14146B1CB3BFAB002DB02C /* RecommendSoupCell.m in Sources */,
 				4E4764D11CAEAC71003147F5 /* JSONKeyMapper.m in Sources */,
 				4E4764D01CAEAC71003147F5 /* JSONModel+networking.m in Sources */,
 				4E4765921CB22FCC003147F5 /* RecommendHeaderView.m in Sources */,
 				4E4765301CAF6CE0003147F5 /* KTCUtil.m in Sources */,
 				4E4764CD1CAEAC71003147F5 /* NSArray+JSONModel.m in Sources */,
+				4E1414661CB3BD13002DB02C /* RecommendSceneListCell.m in Sources */,
 				4E4764D61CAEAC71003147F5 /* SDWebImageCompat.m in Sources */,
 				4E4764D41CAEAC71003147F5 /* NSData+ImageContentType.m in Sources */,
 				4E4765361CAF6D09003147F5 /* FoodViewController.m in Sources */,
 				4E4765391CAF6D22003147F5 /* ShoppingMallViewController.m in Sources */,
 				4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */,
+				4E1414781CB3E34B002DB02C /* RecommendMasterCell.m in Sources */,
 				4E47657F1CAFD982003147F5 /* RecommendADCell.m in Sources */,
 				4E4764DA1CAEAC71003147F5 /* SDWebImageManager.m in Sources */,
 				4E4764D81CAEAC71003147F5 /* SDWebImageDownloader.m in Sources */,

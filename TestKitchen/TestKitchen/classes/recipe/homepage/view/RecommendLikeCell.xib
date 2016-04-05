@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-KL-1D4" userLabel="firstBtn">
@@ -24,7 +24,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJl-X6-l78" userLabel="secondBtn">
-                        <rect key="frame" x="94" y="0.0" width="94" height="120"/>
+                        <rect key="frame" x="94" y="0.0" width="93.5" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="3y7-nv-2vB"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N35-Wn-TYG" userLabel="thirdBtn">
-                        <rect key="frame" x="188" y="0.0" width="93" height="120"/>
+                        <rect key="frame" x="187" y="0.0" width="94" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="oTC-2w-JNr"/>
                         </constraints>
@@ -42,7 +42,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv2-Yg-d4o" userLabel="fourthBtn">
-                        <rect key="frame" x="281" y="0.0" width="94" height="120"/>
+                        <rect key="frame" x="281" y="0.0" width="93.5" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="Yjb-gf-PN3"/>
                         </constraints>
@@ -66,13 +66,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" tag="201" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RcP-9l-Pr8" userLabel="secondImageView">
-                        <rect key="frame" x="109" y="15" width="64" height="50"/>
+                        <rect key="frame" x="109" y="15" width="63.5" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="zSl-To-TcO"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="301" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-Et-l00" userLabel="secondLabel">
-                        <rect key="frame" x="94" y="69" width="94" height="20"/>
+                        <rect key="frame" x="94" y="69" width="93.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="k3l-bt-W3Q"/>
                         </constraints>
@@ -81,13 +81,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" tag="202" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f0z-HL-6Qj" userLabel="thirdImageView">
-                        <rect key="frame" x="203" y="15" width="63" height="50"/>
+                        <rect key="frame" x="202" y="15" width="64" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="l37-1h-Aff"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="302" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-Po-Q61" userLabel="thirdLabel">
-                        <rect key="frame" x="188" y="69" width="93" height="20"/>
+                        <rect key="frame" x="187" y="69" width="93.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="uoV-oR-Kai"/>
                         </constraints>
@@ -96,7 +96,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="303" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xls-U4-W4k" userLabel="fourthLabel">
-                        <rect key="frame" x="281" y="69" width="94" height="20"/>
+                        <rect key="frame" x="281" y="69" width="93.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="eJx-TV-315"/>
                         </constraints>
@@ -105,7 +105,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" tag="203" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-Xg-aUt" userLabel="fourthImageView">
-                        <rect key="frame" x="296" y="15" width="64" height="50"/>
+                        <rect key="frame" x="296" y="15" width="63.5" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="uC8-m2-d84"/>
                         </constraints>
