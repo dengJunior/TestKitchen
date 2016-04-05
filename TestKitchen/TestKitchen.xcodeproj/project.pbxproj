@@ -94,6 +94,8 @@
 		4E47658A1CB219DC003147F5 /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4765891CB219DC003147F5 /* search1.png */; };
 		4E47658E1CB21DD8003147F5 /* FoodRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47658C1CB21DD8003147F5 /* FoodRecordCell.m */; };
 		4E47658F1CB21DD8003147F5 /* FoodRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E47658D1CB21DD8003147F5 /* FoodRecordCell.xib */; };
+		4E4765921CB22FCC003147F5 /* RecommendHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */; };
+		4E4765941CB340A4003147F5 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4765931CB340A4003147F5 /* more_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,9 @@
 		4E47658B1CB21DD8003147F5 /* FoodRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodRecordCell.h; sourceTree = "<group>"; };
 		4E47658C1CB21DD8003147F5 /* FoodRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodRecordCell.m; sourceTree = "<group>"; };
 		4E47658D1CB21DD8003147F5 /* FoodRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodRecordCell.xib; sourceTree = "<group>"; };
+		4E4765901CB22FCC003147F5 /* RecommendHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendHeaderView.h; sourceTree = "<group>"; };
+		4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendHeaderView.m; sourceTree = "<group>"; };
+		4E4765931CB340A4003147F5 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -740,6 +745,8 @@
 				4E47658B1CB21DD8003147F5 /* FoodRecordCell.h */,
 				4E47658C1CB21DD8003147F5 /* FoodRecordCell.m */,
 				4E47658D1CB21DD8003147F5 /* FoodRecordCell.xib */,
+				4E4765901CB22FCC003147F5 /* RecommendHeaderView.h */,
+				4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -813,6 +820,7 @@
 		4E4765271CAF6C91003147F5 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4E4765931CB340A4003147F5 /* more_icon.png */,
 				4E4765891CB219DC003147F5 /* search1.png */,
 			);
 			path = recipe;
@@ -979,6 +987,7 @@
 				4E47656E1CAF7597003147F5 /* shike_normal@2x.png in Resources */,
 				4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */,
 				4E4765601CAF7597003147F5 /* community_select@2x.png in Resources */,
+				4E4765941CB340A4003147F5 /* more_icon.png in Resources */,
 				4E4765851CAFDA0E003147F5 /* RecommendLikeCell.xib in Resources */,
 				4E47656F1CAF7597003147F5 /* shike_normal@3x.png in Resources */,
 				4E47656B1CAF7597003147F5 /* report_normal@3x.png in Resources */,
@@ -1030,6 +1039,7 @@
 				4E4764D51CAEAC71003147F5 /* SDImageCache.m in Sources */,
 				4E4764D11CAEAC71003147F5 /* JSONKeyMapper.m in Sources */,
 				4E4764D01CAEAC71003147F5 /* JSONModel+networking.m in Sources */,
+				4E4765921CB22FCC003147F5 /* RecommendHeaderView.m in Sources */,
 				4E4765301CAF6CE0003147F5 /* KTCUtil.m in Sources */,
 				4E4764CD1CAEAC71003147F5 /* NSArray+JSONModel.m in Sources */,
 				4E4764D61CAEAC71003147F5 /* SDWebImageCompat.m in Sources */,
