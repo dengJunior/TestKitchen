@@ -9,6 +9,8 @@
 #import "RecipeViewController.h"
 #import "RecommendModel.h"
 #import "RecommendView.h"
+#import "MaterialModel.h"
+#import "MaterialView.h"
 
 @interface RecipeViewController ()<UIScrollViewDelegate>
 
@@ -21,10 +23,12 @@
 @property (nonatomic,strong)RecommendView *recommendView;
 
 //首页食材
-@property (nonatomic,strong)UIView *materialView;
+@property (nonatomic,strong)MaterialView *materialView;
+@property (nonatomic,strong)MaterialModel *materialModel;
 
 //首页分类
-@property (nonatomic,strong)UIView *categoryView;
+@property (nonatomic,strong)MaterialView *categoryView;
+@property (nonatomic,strong)MaterialModel *categoryModel;
 
 
 
@@ -45,6 +49,58 @@
     
     //下载食材首页推荐的数据
     [self downloadRecommendData];
+    
+    //下载食材数据
+    [self downloadMaterialData];
+    
+    //下载分类的数据
+    [self downloadCategoryData];
+}
+
+
+//下载分类的数据
+- (void)downloadCategoryData
+{
+   
+    WS(ws)
+    NSDictionary *dict = @{@"methodName":@"CategoryIndex"};
+    [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
+        
+        ws.categoryModel = [[MaterialModel alloc] initWithData:data error:nil];
+        
+        [ws performSelectorOnMainThread:@selector(showCategory) withObject:nil waitUntilDone:NO];
+        
+    } failBlock:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (void)showCategory
+{
+    self.categoryView.model = self.categoryModel;
+}
+
+//下载食材数据
+- (void)downloadMaterialData
+{
+   
+    WS(ws)
+    NSDictionary *dict = @{@"methodName":@"MaterialSubtype"};
+    [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
+        
+        ws.materialModel = [[MaterialModel alloc] initWithData:data error:nil];
+        
+        [ws performSelectorOnMainThread:@selector(showMaterial) withObject:nil waitUntilDone:NO];
+        
+    } failBlock:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+//刷新食材数据
+- (void)showMaterial
+{
+    self.materialView.model = self.materialModel;
 }
 
 
@@ -82,7 +138,7 @@
     }];
     
     //首页食材
-    self.materialView = [[UIView alloc] init];
+    self.materialView = [[MaterialView alloc] init];
     [container addSubview:self.materialView];
     [self.materialView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.bottom.equalTo(container);
@@ -91,7 +147,7 @@
     }];
     
     //首页分类
-    self.categoryView = [[UIView alloc] init];
+    self.categoryView = [[MaterialView alloc] init];
     [container addSubview:self.categoryView];
     [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.bottom.equalTo(container);

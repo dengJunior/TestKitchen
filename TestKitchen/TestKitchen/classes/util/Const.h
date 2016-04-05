@@ -17,7 +17,7 @@
 
 
 
-//首页点击事件的类型
+//首页推荐点击事件的类型
 typedef NS_ENUM(NSInteger, LinkType){
     LinkTypeFoodCourseSerial = 10,       //食谱课程
     LinkTypeHTML,                        //网页
@@ -28,7 +28,10 @@ typedef NS_ENUM(NSInteger, LinkType){
     LinkTypeVideo,                       //视频播放
     LinkTypeScene,                       //场景
     LinkTypeTalent,                      //推荐达人
+    LinkTypePost,                        //
 };
+
+
 
 
 //接口

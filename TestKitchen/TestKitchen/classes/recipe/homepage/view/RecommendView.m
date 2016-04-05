@@ -18,6 +18,8 @@
 #import "RecommendSceneListCell.h"
 #import "RecommendSoupCell.h"
 #import "RecommendMasterCell.h"
+#import "RecommendSelectCell.h"
+#import "RecommendSubjectCell.h"
 
 @interface RecommendView ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
@@ -75,12 +77,13 @@
         }
     }else{
         RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[section-1];
-        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 2 || listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 9) {
+        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 2 || listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 9 || listModel.widget_type.intValue == 8) {
             //1----猜你喜欢
             //2----红包入口
             //5----今日新品
             //3----推荐的场景
             //9----场景列表
+            //8----精选作品
             rowNum = 1;
         }else if (listModel.widget_type.intValue == 6) {
             //养生靓汤等
@@ -88,6 +91,9 @@
         }else if (listModel.widget_type.intValue == 4) {
             //推荐达人
             rowNum = listModel.widget_data.count/4;
+        }else if (listModel.widget_type.intValue == 7) {
+            //美食专题
+            rowNum = listModel.widget_data.count/3;
         }
     }
     
@@ -126,6 +132,12 @@
         }else if (listModel.widget_type.intValue == 4) {
             //推荐大人
             h = 80;
+        }else if (listModel.widget_type.intValue == 8) {
+            //精选作品
+            h = 240;
+        }else if (listModel.widget_type.intValue == 7) {
+            //美食专题
+            h = 180;
         }
     }
     
@@ -140,12 +152,14 @@
     
     if (section > 0) {
         RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[section-1];
-        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 6 || listModel.widget_type.intValue == 4 ) {
+        if (listModel.widget_type.intValue == 1 || listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 6 || listModel.widget_type.intValue == 4 || listModel.widget_type.intValue == 8 || listModel.widget_type.intValue == 7) {
             //1----猜你喜欢
             //5----今日推荐
             //3----推荐的场景
             //6----养生靓汤等
             //4----推荐达人
+            //8----精选作品
+            //7----美食专题
             h = 44;
         }
     }
@@ -164,11 +178,12 @@
         if (listModel.widget_type.intValue == 1) {
             //猜你喜欢
             view = [self createLikeHeaderView];
-        }else if (listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 6 || listModel.widget_type.intValue == 4) {
+        }else if (listModel.widget_type.intValue == 5 || listModel.widget_type.intValue == 3 || listModel.widget_type.intValue == 6 || listModel.widget_type.intValue == 4 || listModel.widget_type.intValue == 8 ||listModel.widget_type.intValue == 7) {
             //5-----今日新品
             //3----推荐的场景
             //6----养生靓汤等
             //4----推荐达人
+            //8----精选作品
             view = [[RecommendHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 44) title:listModel.title];
         }
     }
@@ -238,11 +253,51 @@
         }else if (listModel.widget_type.intValue == 4) {
             //推荐达人
             cell = [self createRecommendMasterCellForTableView:tableView atIndexPath:indexPath];
+        }else if (listModel.widget_type.intValue == 8) {
+            //精选作品
+            cell = [self createRecommendSelectCellForTableView:tableView atIndexPath:indexPath];
+        }else if (listModel.widget_type.intValue == 7) {
+            //美食专题
+            cell = [self createRecommendSubjectCellForTableview:tableView atIndexPath:indexPath];
         }
     }
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+    
+}
+
+//美食专题
+- (UITableViewCell *)createRecommendSubjectCellForTableview:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"recommendSubjectCellId";
+    RecommendSubjectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RecommendSubjectCell" owner:nil options:nil] lastObject];
+    }
+    //显示数据
+    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[indexPath.section-1];
+    cell.modelArray = [listModel.widget_data subarrayWithRange:NSMakeRange(indexPath.row*3, 3)];
+    
+    return cell;
+    
+}
+
+//精选作品
+- (UITableViewCell *)createRecommendSelectCellForTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellId = @"recommendSelectCellId";
+    RecommendSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (nil == cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"RecommendSelectCell" owner:nil options:nil] lastObject];
+    }
+    
+    //点击事件
+    cell.clickBlock = self.clickBlock;
+    //数据
+    RecommendDataWidgetListModel *listModel = self.rModel.data.widgetList[indexPath.section-1];
+    cell.listModel = listModel;
     return cell;
     
 }
@@ -423,6 +478,14 @@
                     if (self.clickBlock) {
                         self.clickBlock(imageModel.link, LinkTypeTalent);
                     }
+                }
+            }
+        }else if (listModel.widget_type.intValue == 7) {
+            //美食专题
+            RecommendWidgetDataModel *imageModel = listModel.widget_data[3*indexPath.row];
+            if ([imageModel.type isEqualToString:@"image"]) {
+                if (self.clickBlock) {
+                    self.clickBlock(imageModel.link, LinkTypeHTML);
                 }
             }
         }

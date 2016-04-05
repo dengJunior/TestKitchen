@@ -23,6 +23,13 @@
 		4E1414741CB3C3C6002DB02C /* icon_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414701CB3C3C6002DB02C /* icon_play@3x.png */; };
 		4E1414781CB3E34B002DB02C /* RecommendMasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */; };
 		4E1414791CB3E34B002DB02C /* RecommendMasterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */; };
+		4E14147D1CB3EBC6002DB02C /* RecommendSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14147B1CB3EBC6002DB02C /* RecommendSelectCell.m */; };
+		4E14147E1CB3EBC6002DB02C /* RecommendSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E14147C1CB3EBC6002DB02C /* RecommendSelectCell.xib */; };
+		4E1414821CB40EEA002DB02C /* RecommendSubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414801CB40EEA002DB02C /* RecommendSubjectCell.m */; };
+		4E1414831CB40EEA002DB02C /* RecommendSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414811CB40EEA002DB02C /* RecommendSubjectCell.xib */; };
+		4E14148E1CB413CE002DB02C /* MaterialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14148D1CB413CE002DB02C /* MaterialModel.m */; };
+		4E1414921CB416DB002DB02C /* MaterialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414901CB416DB002DB02C /* MaterialCell.m */; };
+		4E1414961CB41E7F002DB02C /* MaterialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414951CB41E7F002DB02C /* MaterialView.m */; };
 		4E4764581CAEA61C003147F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4764571CAEA61C003147F5 /* main.m */; };
 		4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645A1CAEA61C003147F5 /* AppDelegate.m */; };
 		4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645D1CAEA61C003147F5 /* ViewController.m */; };
@@ -153,6 +160,18 @@
 		4E1414751CB3E34B002DB02C /* RecommendMasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendMasterCell.h; sourceTree = "<group>"; };
 		4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendMasterCell.m; sourceTree = "<group>"; };
 		4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendMasterCell.xib; sourceTree = "<group>"; };
+		4E14147A1CB3EBC6002DB02C /* RecommendSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSelectCell.h; sourceTree = "<group>"; };
+		4E14147B1CB3EBC6002DB02C /* RecommendSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSelectCell.m; sourceTree = "<group>"; };
+		4E14147C1CB3EBC6002DB02C /* RecommendSelectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendSelectCell.xib; sourceTree = "<group>"; };
+		4E14147F1CB40EEA002DB02C /* RecommendSubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSubjectCell.h; sourceTree = "<group>"; };
+		4E1414801CB40EEA002DB02C /* RecommendSubjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSubjectCell.m; sourceTree = "<group>"; };
+		4E1414811CB40EEA002DB02C /* RecommendSubjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendSubjectCell.xib; sourceTree = "<group>"; };
+		4E14148C1CB413CE002DB02C /* MaterialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialModel.h; sourceTree = "<group>"; };
+		4E14148D1CB413CE002DB02C /* MaterialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialModel.m; sourceTree = "<group>"; };
+		4E14148F1CB416DB002DB02C /* MaterialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialCell.h; sourceTree = "<group>"; };
+		4E1414901CB416DB002DB02C /* MaterialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialCell.m; sourceTree = "<group>"; };
+		4E1414941CB41E7F002DB02C /* MaterialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialView.h; sourceTree = "<group>"; };
+		4E1414951CB41E7F002DB02C /* MaterialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialView.m; sourceTree = "<group>"; };
 		4E4764531CAEA61C003147F5 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4764571CAEA61C003147F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E4764591CAEA61C003147F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -338,6 +357,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1414841CB412E7002DB02C /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414851CB412E7002DB02C /* controller */,
+				4E1414861CB412E7002DB02C /* model */,
+				4E1414871CB412E7002DB02C /* view */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		4E1414851CB412E7002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E1414861CB412E7002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E1414871CB412E7002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4E1414881CB412E7002DB02C /* material */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414891CB412E7002DB02C /* controller */,
+				4E14148A1CB412E7002DB02C /* model */,
+				4E14148B1CB412E7002DB02C /* view */,
+			);
+			path = material;
+			sourceTree = "<group>";
+		};
+		4E1414891CB412E7002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E14148A1CB412E7002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4E14148C1CB413CE002DB02C /* MaterialModel.h */,
+				4E14148D1CB413CE002DB02C /* MaterialModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E14148B1CB412E7002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4E14148F1CB416DB002DB02C /* MaterialCell.h */,
+				4E1414901CB416DB002DB02C /* MaterialCell.m */,
+				4E1414941CB41E7F002DB02C /* MaterialView.h */,
+				4E1414951CB41E7F002DB02C /* MaterialView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4E47644A1CAEA61C003147F5 = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +820,8 @@
 		4E47651B1CAF6C86003147F5 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4E1414841CB412E7002DB02C /* category */,
+				4E1414881CB412E7002DB02C /* material */,
 				4E47651C1CAF6C86003147F5 /* homepage */,
 			);
 			path = recipe;
@@ -799,6 +888,12 @@
 				4E1414751CB3E34B002DB02C /* RecommendMasterCell.h */,
 				4E1414761CB3E34B002DB02C /* RecommendMasterCell.m */,
 				4E1414771CB3E34B002DB02C /* RecommendMasterCell.xib */,
+				4E14147A1CB3EBC6002DB02C /* RecommendSelectCell.h */,
+				4E14147B1CB3EBC6002DB02C /* RecommendSelectCell.m */,
+				4E14147C1CB3EBC6002DB02C /* RecommendSelectCell.xib */,
+				4E14147F1CB40EEA002DB02C /* RecommendSubjectCell.h */,
+				4E1414801CB40EEA002DB02C /* RecommendSubjectCell.m */,
+				4E1414811CB40EEA002DB02C /* RecommendSubjectCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1037,6 +1132,7 @@
 				4E4765661CAF7597003147F5 /* mine_normal@2x.png in Resources */,
 				4E4765631CAF7597003147F5 /* home_normal@3x.png in Resources */,
 				4E4765651CAF7597003147F5 /* home_select@3x.png in Resources */,
+				4E1414831CB40EEA002DB02C /* RecommendSubjectCell.xib in Resources */,
 				4E4764631CAEA61C003147F5 /* Assets.xcassets in Resources */,
 				4E4765741CAF7597003147F5 /* shop_select@2x.png in Resources */,
 				4E4765731CAF7597003147F5 /* shop_normal@3x.png in Resources */,
@@ -1052,6 +1148,7 @@
 				4E14145C1CB39EF3002DB02C /* play-A@2x.png in Resources */,
 				4E4765751CAF7597003147F5 /* shop_select@3x.png in Resources */,
 				4E1414741CB3C3C6002DB02C /* icon_play@3x.png in Resources */,
+				4E14147E1CB3EBC6002DB02C /* RecommendSelectCell.xib in Resources */,
 				4E1414671CB3BD13002DB02C /* RecommendSceneListCell.xib in Resources */,
 				4E4765601CAF7597003147F5 /* community_select@2x.png in Resources */,
 				4E4765941CB340A4003147F5 /* more_icon.png in Resources */,
@@ -1109,10 +1206,13 @@
 				4E4764D51CAEAC71003147F5 /* SDImageCache.m in Sources */,
 				4E14146B1CB3BFAB002DB02C /* RecommendSoupCell.m in Sources */,
 				4E4764D11CAEAC71003147F5 /* JSONKeyMapper.m in Sources */,
+				4E1414921CB416DB002DB02C /* MaterialCell.m in Sources */,
 				4E4764D01CAEAC71003147F5 /* JSONModel+networking.m in Sources */,
+				4E1414821CB40EEA002DB02C /* RecommendSubjectCell.m in Sources */,
 				4E4765921CB22FCC003147F5 /* RecommendHeaderView.m in Sources */,
 				4E4765301CAF6CE0003147F5 /* KTCUtil.m in Sources */,
 				4E4764CD1CAEAC71003147F5 /* NSArray+JSONModel.m in Sources */,
+				4E1414961CB41E7F002DB02C /* MaterialView.m in Sources */,
 				4E1414661CB3BD13002DB02C /* RecommendSceneListCell.m in Sources */,
 				4E4764D61CAEAC71003147F5 /* SDWebImageCompat.m in Sources */,
 				4E4764D41CAEAC71003147F5 /* NSData+ImageContentType.m in Sources */,
@@ -1124,9 +1224,11 @@
 				4E4764DA1CAEAC71003147F5 /* SDWebImageManager.m in Sources */,
 				4E4764D81CAEAC71003147F5 /* SDWebImageDownloader.m in Sources */,
 				4E1414551CB38615002DB02C /* DailyMenuCell.m in Sources */,
+				4E14148E1CB413CE002DB02C /* MaterialModel.m in Sources */,
 				4E4765011CAEAC9C003147F5 /* MASViewAttribute.m in Sources */,
 				4E4764FE1CAEAC9C003147F5 /* MASConstraint.m in Sources */,
 				4E4764E11CAEAC71003147F5 /* UIImageView+WebCache.m in Sources */,
+				4E14147D1CB3EBC6002DB02C /* RecommendSelectCell.m in Sources */,
 				4E4764E01CAEAC71003147F5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				4E4765881CB216CD003147F5 /* LikeHeaderView.m in Sources */,
 				4E47658E1CB21DD8003147F5 /* FoodRecordCell.m in Sources */,
