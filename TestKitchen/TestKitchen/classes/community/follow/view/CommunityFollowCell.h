@@ -10,4 +10,6 @@
 
 @interface CommunityFollowCell : UITableViewCell
 
+
+
 @end
