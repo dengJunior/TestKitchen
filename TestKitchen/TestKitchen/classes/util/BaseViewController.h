@@ -10,4 +10,9 @@
 
 @interface BaseViewController : UIViewController
 
+//导航标题
+- (void)addNavTitle:(NSString *)title;
+//导航按钮
+- (void)addNavBtnImage:(NSString *)imageName target:(id)target action:(SEL)action isLeft:(BOOL)isLeft;
+
 @end

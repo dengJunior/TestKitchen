@@ -38,6 +38,7 @@
         self.tbView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         self.tbView.delegate = self;
         self.tbView.dataSource = self;
+        self.tbView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:self.tbView];
     
         
@@ -56,6 +57,7 @@
 {
     _rModel = rModel;
     
+    self.tbView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.tbView reloadData];
     
 }
@@ -493,6 +495,21 @@
         
     }
     
+}
+
+
+//去掉表格的粘滞性
+//也就是不让section的header显示在最上面不动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //每个section的header高度
+    CGFloat h = 44;
+    
+    if (scrollView.contentOffset.y >0 && scrollView.contentOffset.y < h) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    }else if (scrollView.contentOffset.y >= h){
+        scrollView.contentInset = UIEdgeInsetsMake(-h, 0, 0, 0);
+    }
 }
 
 

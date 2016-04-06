@@ -30,6 +30,21 @@
 		4E14148E1CB413CE002DB02C /* MaterialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14148D1CB413CE002DB02C /* MaterialModel.m */; };
 		4E1414921CB416DB002DB02C /* MaterialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414901CB416DB002DB02C /* MaterialCell.m */; };
 		4E1414961CB41E7F002DB02C /* MaterialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414951CB41E7F002DB02C /* MaterialView.m */; };
+		4E1414991CB49389002DB02C /* KTCSegmentCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414981CB49389002DB02C /* KTCSegmentCtrl.m */; };
+		4E1414A81CB4CEA6002DB02C /* saoyisao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414A41CB4CEA6002DB02C /* saoyisao@2x.png */; };
+		4E1414A91CB4CEA6002DB02C /* saoyisao@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414A51CB4CEA6002DB02C /* saoyisao@3x.png */; };
+		4E1414AA1CB4CEA6002DB02C /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414A61CB4CEA6002DB02C /* search@2x.png */; };
+		4E1414AB1CB4CEA6002DB02C /* search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414A71CB4CEA6002DB02C /* search@3x.png */; };
+		4E1414B81CB4E41D002DB02C /* 点赞.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414B71CB4E41D002DB02C /* 点赞.png */; };
+		4E1414DC1CB4F66B002DB02C /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414C61CB4F66B002DB02C /* CommunityViewController.m */; };
+		4E1414DD1CB4F66B002DB02C /* CommunityNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414C91CB4F66B002DB02C /* CommunityNewsModel.m */; };
+		4E1414DE1CB4F66B002DB02C /* CommunityRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414CB1CB4F66B002DB02C /* CommunityRecommendModel.m */; };
+		4E1414DF1CB4F66B002DB02C /* CommunityNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414D21CB4F66B002DB02C /* CommunityNewsCell.m */; };
+		4E1414E01CB4F66B002DB02C /* CommunityNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414D31CB4F66B002DB02C /* CommunityNewsCell.xib */; };
+		4E1414E11CB4F66B002DB02C /* CommunityNewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414D51CB4F66B002DB02C /* CommunityNewsView.m */; };
+		4E1414E21CB4F66B002DB02C /* CommunityRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414DB1CB4F66B002DB02C /* CommunityRecommendView.m */; };
+		4E1414E61CB4FD6F002DB02C /* CommunityActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414E41CB4FD6F002DB02C /* CommunityActivityCell.m */; };
+		4E1414E71CB4FD6F002DB02C /* CommunityActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414E51CB4FD6F002DB02C /* CommunityActivityCell.xib */; };
 		4E4764581CAEA61C003147F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4764571CAEA61C003147F5 /* main.m */; };
 		4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645A1CAEA61C003147F5 /* AppDelegate.m */; };
 		4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645D1CAEA61C003147F5 /* ViewController.m */; };
@@ -77,7 +92,6 @@
 		4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765291CAF6CAF003147F5 /* MainTabBarController.m */; };
 		4E47652D1CAF6CC8003147F5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47652C1CAF6CC8003147F5 /* BaseViewController.m */; };
 		4E4765301CAF6CE0003147F5 /* KTCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47652F1CAF6CE0003147F5 /* KTCUtil.m */; };
-		4E4765331CAF6CF5003147F5 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765321CAF6CF5003147F5 /* CommunityViewController.m */; };
 		4E4765361CAF6D09003147F5 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765351CAF6D09003147F5 /* FoodViewController.m */; };
 		4E4765391CAF6D22003147F5 /* ShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765381CAF6D22003147F5 /* ShoppingMallViewController.m */; };
 		4E47653C1CAF6D2F003147F5 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47653B1CAF6D2F003147F5 /* MineViewController.m */; };
@@ -172,6 +186,29 @@
 		4E1414901CB416DB002DB02C /* MaterialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialCell.m; sourceTree = "<group>"; };
 		4E1414941CB41E7F002DB02C /* MaterialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaterialView.h; sourceTree = "<group>"; };
 		4E1414951CB41E7F002DB02C /* MaterialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaterialView.m; sourceTree = "<group>"; };
+		4E1414971CB49389002DB02C /* KTCSegmentCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCSegmentCtrl.h; sourceTree = "<group>"; };
+		4E1414981CB49389002DB02C /* KTCSegmentCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCSegmentCtrl.m; sourceTree = "<group>"; };
+		4E1414A41CB4CEA6002DB02C /* saoyisao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saoyisao@2x.png"; sourceTree = "<group>"; };
+		4E1414A51CB4CEA6002DB02C /* saoyisao@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saoyisao@3x.png"; sourceTree = "<group>"; };
+		4E1414A61CB4CEA6002DB02C /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		4E1414A71CB4CEA6002DB02C /* search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@3x.png"; sourceTree = "<group>"; };
+		4E1414B71CB4E41D002DB02C /* 点赞.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "点赞.png"; sourceTree = "<group>"; };
+		4E1414C51CB4F66B002DB02C /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		4E1414C61CB4F66B002DB02C /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		4E1414C81CB4F66B002DB02C /* CommunityNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityNewsModel.h; sourceTree = "<group>"; };
+		4E1414C91CB4F66B002DB02C /* CommunityNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityNewsModel.m; sourceTree = "<group>"; };
+		4E1414CA1CB4F66B002DB02C /* CommunityRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRecommendModel.h; sourceTree = "<group>"; };
+		4E1414CB1CB4F66B002DB02C /* CommunityRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityRecommendModel.m; sourceTree = "<group>"; };
+		4E1414D11CB4F66B002DB02C /* CommunityNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityNewsCell.h; sourceTree = "<group>"; };
+		4E1414D21CB4F66B002DB02C /* CommunityNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityNewsCell.m; sourceTree = "<group>"; };
+		4E1414D31CB4F66B002DB02C /* CommunityNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityNewsCell.xib; sourceTree = "<group>"; };
+		4E1414D41CB4F66B002DB02C /* CommunityNewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityNewsView.h; sourceTree = "<group>"; };
+		4E1414D51CB4F66B002DB02C /* CommunityNewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityNewsView.m; sourceTree = "<group>"; };
+		4E1414DA1CB4F66B002DB02C /* CommunityRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRecommendView.h; sourceTree = "<group>"; };
+		4E1414DB1CB4F66B002DB02C /* CommunityRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityRecommendView.m; sourceTree = "<group>"; };
+		4E1414E31CB4FD6F002DB02C /* CommunityActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityActivityCell.h; sourceTree = "<group>"; };
+		4E1414E41CB4FD6F002DB02C /* CommunityActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityActivityCell.m; sourceTree = "<group>"; };
+		4E1414E51CB4FD6F002DB02C /* CommunityActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityActivityCell.xib; sourceTree = "<group>"; };
 		4E4764531CAEA61C003147F5 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4764571CAEA61C003147F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E4764591CAEA61C003147F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -273,8 +310,6 @@
 		4E47652C1CAF6CC8003147F5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4E47652E1CAF6CE0003147F5 /* KTCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCUtil.h; sourceTree = "<group>"; };
 		4E47652F1CAF6CE0003147F5 /* KTCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCUtil.m; sourceTree = "<group>"; };
-		4E4765311CAF6CF5003147F5 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
-		4E4765321CAF6CF5003147F5 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		4E4765341CAF6D09003147F5 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		4E4765351CAF6D09003147F5 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		4E4765371CAF6D22003147F5 /* ShoppingMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingMallViewController.h; sourceTree = "<group>"; };
@@ -421,6 +456,148 @@
 				4E1414901CB416DB002DB02C /* MaterialCell.m */,
 				4E1414941CB41E7F002DB02C /* MaterialView.h */,
 				4E1414951CB41E7F002DB02C /* MaterialView.m */,
+				4E1414971CB49389002DB02C /* KTCSegmentCtrl.h */,
+				4E1414981CB49389002DB02C /* KTCSegmentCtrl.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4E1414BF1CB4F66B002DB02C /* follow */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414C01CB4F66B002DB02C /* controller */,
+				4E1414C11CB4F66B002DB02C /* model */,
+				4E1414C21CB4F66B002DB02C /* view */,
+			);
+			path = follow;
+			sourceTree = "<group>";
+		};
+		4E1414C01CB4F66B002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E1414C11CB4F66B002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E1414C21CB4F66B002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4E1414C31CB4F66B002DB02C /* homepage */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414C41CB4F66B002DB02C /* controller */,
+				4E1414C71CB4F66B002DB02C /* model */,
+				4E1414CC1CB4F66B002DB02C /* view */,
+			);
+			path = homepage;
+			sourceTree = "<group>";
+		};
+		4E1414C41CB4F66B002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414C51CB4F66B002DB02C /* CommunityViewController.h */,
+				4E1414C61CB4F66B002DB02C /* CommunityViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E1414C71CB4F66B002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414C81CB4F66B002DB02C /* CommunityNewsModel.h */,
+				4E1414C91CB4F66B002DB02C /* CommunityNewsModel.m */,
+				4E1414CA1CB4F66B002DB02C /* CommunityRecommendModel.h */,
+				4E1414CB1CB4F66B002DB02C /* CommunityRecommendModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E1414CC1CB4F66B002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4E1414CD1CB4F66B002DB02C /* news */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414CE1CB4F66B002DB02C /* controller */,
+				4E1414CF1CB4F66B002DB02C /* model */,
+				4E1414D01CB4F66B002DB02C /* view */,
+			);
+			path = news;
+			sourceTree = "<group>";
+		};
+		4E1414CE1CB4F66B002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E1414CF1CB4F66B002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E1414D01CB4F66B002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414D11CB4F66B002DB02C /* CommunityNewsCell.h */,
+				4E1414D21CB4F66B002DB02C /* CommunityNewsCell.m */,
+				4E1414D31CB4F66B002DB02C /* CommunityNewsCell.xib */,
+				4E1414D41CB4F66B002DB02C /* CommunityNewsView.h */,
+				4E1414D51CB4F66B002DB02C /* CommunityNewsView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4E1414D61CB4F66B002DB02C /* recommend */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414D71CB4F66B002DB02C /* controller */,
+				4E1414D81CB4F66B002DB02C /* model */,
+				4E1414D91CB4F66B002DB02C /* view */,
+			);
+			path = recommend;
+			sourceTree = "<group>";
+		};
+		4E1414D71CB4F66B002DB02C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E1414D81CB4F66B002DB02C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E1414D91CB4F66B002DB02C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4E1414DA1CB4F66B002DB02C /* CommunityRecommendView.h */,
+				4E1414DB1CB4F66B002DB02C /* CommunityRecommendView.m */,
+				4E1414E31CB4FD6F002DB02C /* CommunityActivityCell.h */,
+				4E1414E41CB4FD6F002DB02C /* CommunityActivityCell.m */,
+				4E1414E51CB4FD6F002DB02C /* CommunityActivityCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -656,42 +833,12 @@
 		4E4765071CAF6C86003147F5 /* community */ = {
 			isa = PBXGroup;
 			children = (
-				4E4765081CAF6C86003147F5 /* homepage */,
+				4E1414BF1CB4F66B002DB02C /* follow */,
+				4E1414C31CB4F66B002DB02C /* homepage */,
+				4E1414CD1CB4F66B002DB02C /* news */,
+				4E1414D61CB4F66B002DB02C /* recommend */,
 			);
 			path = community;
-			sourceTree = "<group>";
-		};
-		4E4765081CAF6C86003147F5 /* homepage */ = {
-			isa = PBXGroup;
-			children = (
-				4E4765091CAF6C86003147F5 /* controller */,
-				4E47650A1CAF6C86003147F5 /* model */,
-				4E47650B1CAF6C86003147F5 /* view */,
-			);
-			path = homepage;
-			sourceTree = "<group>";
-		};
-		4E4765091CAF6C86003147F5 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				4E4765311CAF6CF5003147F5 /* CommunityViewController.h */,
-				4E4765321CAF6CF5003147F5 /* CommunityViewController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		4E47650A1CAF6C86003147F5 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4E47650B1CAF6C86003147F5 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		4E47650C1CAF6C86003147F5 /* foodClass */ = {
@@ -939,6 +1086,7 @@
 		4E4765231CAF6C91003147F5 /* community */ = {
 			isa = PBXGroup;
 			children = (
+				4E1414B71CB4E41D002DB02C /* 点赞.png */,
 			);
 			path = community;
 			sourceTree = "<group>";
@@ -967,6 +1115,10 @@
 		4E4765271CAF6C91003147F5 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4E1414A41CB4CEA6002DB02C /* saoyisao@2x.png */,
+				4E1414A51CB4CEA6002DB02C /* saoyisao@3x.png */,
+				4E1414A61CB4CEA6002DB02C /* search@2x.png */,
+				4E1414A71CB4CEA6002DB02C /* search@3x.png */,
 				4E14146D1CB3C3C6002DB02C /* icon_like@2x.png */,
 				4E14146E1CB3C3C6002DB02C /* icon_like@3x.png */,
 				4E14146F1CB3C3C6002DB02C /* icon_play@2x.png */,
@@ -1113,6 +1265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1414E71CB4FD6F002DB02C /* CommunityActivityCell.xib in Resources */,
+				4E1414AA1CB4CEA6002DB02C /* search@2x.png in Resources */,
 				4E4765621CAF7597003147F5 /* home_normal@2x.png in Resources */,
 				4E4764661CAEA61C003147F5 /* LaunchScreen.storyboard in Resources */,
 				4E4765611CAF7597003147F5 /* community_select@3x.png in Resources */,
@@ -1120,6 +1274,7 @@
 				4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */,
 				4E47658F1CB21DD8003147F5 /* FoodRecordCell.xib in Resources */,
 				4E1414711CB3C3C6002DB02C /* icon_like@2x.png in Resources */,
+				4E1414AB1CB4CEA6002DB02C /* search@3x.png in Resources */,
 				4E1414731CB3C3C6002DB02C /* icon_play@2x.png in Resources */,
 				4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */,
 				4E1414791CB3E34B002DB02C /* RecommendMasterCell.xib in Resources */,
@@ -1131,12 +1286,16 @@
 				4E47655E1CAF7597003147F5 /* community_normal@2x.png in Resources */,
 				4E4765661CAF7597003147F5 /* mine_normal@2x.png in Resources */,
 				4E4765631CAF7597003147F5 /* home_normal@3x.png in Resources */,
+				4E1414B81CB4E41D002DB02C /* 点赞.png in Resources */,
 				4E4765651CAF7597003147F5 /* home_select@3x.png in Resources */,
 				4E1414831CB40EEA002DB02C /* RecommendSubjectCell.xib in Resources */,
 				4E4764631CAEA61C003147F5 /* Assets.xcassets in Resources */,
+				4E1414A91CB4CEA6002DB02C /* saoyisao@3x.png in Resources */,
 				4E4765741CAF7597003147F5 /* shop_select@2x.png in Resources */,
+				4E1414A81CB4CEA6002DB02C /* saoyisao@2x.png in Resources */,
 				4E4765731CAF7597003147F5 /* shop_normal@3x.png in Resources */,
 				4E47658A1CB219DC003147F5 /* search1.png in Resources */,
+				4E1414E01CB4F66B002DB02C /* CommunityNewsCell.xib in Resources */,
 				4E4765711CAF7597003147F5 /* shike_select@3x.png in Resources */,
 				4E4765671CAF7597003147F5 /* mine_normal@3x.png in Resources */,
 				4E47656D1CAF7597003147F5 /* report_select@3x.png in Resources */,
@@ -1185,13 +1344,16 @@
 				4E4765051CAEAC9C003147F5 /* View+MASAdditions.m in Sources */,
 				4E4764CF1CAEAC71003147F5 /* JSONHTTPClient.m in Sources */,
 				4E4764DF1CAEAC71003147F5 /* UIImage+WebP.m in Sources */,
+				4E1414991CB49389002DB02C /* KTCSegmentCtrl.m in Sources */,
 				4E4764CA1CAEAC71003147F5 /* JSONModelArray.m in Sources */,
 				4E4764CC1CAEAC71003147F5 /* JSONModelError.m in Sources */,
 				4E4765841CAFDA0E003147F5 /* RecommendLikeCell.m in Sources */,
 				4E1414611CB3A951002DB02C /* RecommendSceneCell.m in Sources */,
+				4E1414DE1CB4F66B002DB02C /* CommunityRecommendModel.m in Sources */,
 				4E4764FD1CAEAC9C003147F5 /* MASCompositeConstraint.m in Sources */,
 				4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */,
 				4E4764FF1CAEAC9C003147F5 /* MASConstraintMaker.m in Sources */,
+				4E1414E61CB4FD6F002DB02C /* CommunityActivityCell.m in Sources */,
 				4E4764CE1CAEAC71003147F5 /* JSONAPI.m in Sources */,
 				4E47653C1CAF6D2F003147F5 /* MineViewController.m in Sources */,
 				4E47653F1CAF6D3E003147F5 /* RecipeViewController.m in Sources */,
@@ -1199,6 +1361,7 @@
 				4E4765061CAEAC9C003147F5 /* ViewController+MASAdditions.m in Sources */,
 				4E4765001CAEAC9C003147F5 /* MASLayoutConstraint.m in Sources */,
 				4E4764D21CAEAC71003147F5 /* JSONValueTransformer.m in Sources */,
+				4E1414E11CB4F66B002DB02C /* CommunityNewsView.m in Sources */,
 				4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */,
 				4E4764D91CAEAC71003147F5 /* SDWebImageDownloaderOperation.m in Sources */,
 				4E47657B1CAF87DC003147F5 /* RecommendView.m in Sources */,
@@ -1217,6 +1380,8 @@
 				4E4764D61CAEAC71003147F5 /* SDWebImageCompat.m in Sources */,
 				4E4764D41CAEAC71003147F5 /* NSData+ImageContentType.m in Sources */,
 				4E4765361CAF6D09003147F5 /* FoodViewController.m in Sources */,
+				4E1414DF1CB4F66B002DB02C /* CommunityNewsCell.m in Sources */,
+				4E1414DC1CB4F66B002DB02C /* CommunityViewController.m in Sources */,
 				4E4765391CAF6D22003147F5 /* ShoppingMallViewController.m in Sources */,
 				4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */,
 				4E1414781CB3E34B002DB02C /* RecommendMasterCell.m in Sources */,
@@ -1230,12 +1395,14 @@
 				4E4764E11CAEAC71003147F5 /* UIImageView+WebCache.m in Sources */,
 				4E14147D1CB3EBC6002DB02C /* RecommendSelectCell.m in Sources */,
 				4E4764E01CAEAC71003147F5 /* UIImageView+HighlightedWebCache.m in Sources */,
+				4E1414DD1CB4F66B002DB02C /* CommunityNewsModel.m in Sources */,
 				4E4765881CB216CD003147F5 /* LikeHeaderView.m in Sources */,
 				4E47658E1CB21DD8003147F5 /* FoodRecordCell.m in Sources */,
 				4E4765021CAEAC9C003147F5 /* MASViewConstraint.m in Sources */,
 				4E4764D31CAEAC71003147F5 /* MKAnnotationView+WebCache.m in Sources */,
 				4E4764DD1CAEAC71003147F5 /* UIImage+GIF.m in Sources */,
 				4E4764581CAEA61C003147F5 /* main.m in Sources */,
+				4E1414E21CB4F66B002DB02C /* CommunityRecommendView.m in Sources */,
 				4E4764DB1CAEAC71003147F5 /* SDWebImagePrefetcher.m in Sources */,
 				4E4764DC1CAEAC71003147F5 /* UIButton+WebCache.m in Sources */,
 				4E4765781CAF7BC3003147F5 /* RecommendModel.m in Sources */,
@@ -1243,7 +1410,6 @@
 				4E4765031CAEAC9C003147F5 /* NSArray+MASAdditions.m in Sources */,
 				4E4764D71CAEAC71003147F5 /* SDWebImageDecoder.m in Sources */,
 				4E4765041CAEAC9C003147F5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				4E4765331CAF6CF5003147F5 /* CommunityViewController.m in Sources */,
 				4E4764E21CAEAC71003147F5 /* UIView+WebCacheOperation.m in Sources */,
 				4E4764CB1CAEAC71003147F5 /* JSONModelClassProperty.m in Sources */,
 				4E47652D1CAF6CC8003147F5 /* BaseViewController.m in Sources */,

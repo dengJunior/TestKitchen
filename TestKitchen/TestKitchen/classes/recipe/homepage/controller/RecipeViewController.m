@@ -11,8 +11,9 @@
 #import "RecommendView.h"
 #import "MaterialModel.h"
 #import "MaterialView.h"
+#import "KTCSegmentCtrl.h"
 
-@interface RecipeViewController ()<UIScrollViewDelegate>
+@interface RecipeViewController ()<UIScrollViewDelegate,KTCSegmentCtrlDelegate>
 
 
 @property (nonatomic,strong)UIScrollView *scrollView;
@@ -30,7 +31,8 @@
 @property (nonatomic,strong)MaterialView *categoryView;
 @property (nonatomic,strong)MaterialModel *categoryModel;
 
-
+//导航的选择控件
+@property (nonatomic,strong)KTCSegmentCtrl *segCtrl;
 
 @end
 
@@ -45,7 +47,8 @@
     //首页视图
     [self createHomePageView];
     
-    
+    //首页导航
+    [self createMyNav];
     
     //下载食材首页推荐的数据
     [self downloadRecommendData];
@@ -55,6 +58,36 @@
     
     //下载分类的数据
     [self downloadCategoryData];
+}
+
+
+//首页导航
+- (void)createMyNav
+{
+    //扫一扫
+    [self addNavBtnImage:@"saoyisao" target:self action:@selector(scanAction) isLeft:YES];
+    
+    
+    self.segCtrl = [[KTCSegmentCtrl alloc] initWithFrame:CGRectMake(80, 0, kScreenW-80*2, 44) titleArray:@[@"推荐",@"食材",@"分类"]];
+    self.segCtrl.delegate = self;
+    self.navigationItem.titleView = self.segCtrl;
+    
+    //搜索
+    [self addNavBtnImage:@"search" target:self action:@selector(searchAction) isLeft:NO];
+    
+    
+}
+
+//扫一扫
+- (void)scanAction
+{
+    
+}
+
+//搜索
+- (void)searchAction
+{
+    
 }
 
 
@@ -198,6 +231,21 @@
 }
 
 #pragma mark - 界面跳转
+
+
+#pragma mark - 选择控件的代理
+- (void)didSelectSegCtrlAtIndex:(NSInteger)index
+{
+    [self.scrollView setContentOffset:CGPointMake(kScreenW*index, 0) animated:YES];
+}
+
+#pragma mark - UIScrollView代理
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x/kScreenW;
+    
+    self.segCtrl.selectedIndex = index;
+}
 
 
 /*

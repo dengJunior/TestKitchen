@@ -27,6 +27,7 @@
         self.tbView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         self.tbView.delegate = self;
         self.tbView.dataSource = self;
+        self.tbView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:self.tbView];
         
         //约束
@@ -42,6 +43,7 @@
 {
     _model = model;
     
+    self.tbView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.tbView reloadData];
 }
 

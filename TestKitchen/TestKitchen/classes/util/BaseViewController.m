@@ -21,6 +21,29 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)addNavTitle:(NSString *)title
+{
+    UILabel *label = [KTCUtil createLabelText:title font:[UIFont boldSystemFontOfSize:20] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentCenter];
+    self.navigationItem.titleView = label;
+}
+
+
+- (void)addNavBtnImage:(NSString *)imageName target:(id)target action:(SEL)action isLeft:(BOOL)isLeft
+{
+    UIButton *btn = [KTCUtil createBtnTitle:nil imageName:imageName selectImageName:nil target:target action:action];
+    btn.frame = CGRectMake(0, 8, 32, 32);
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    
+    if (isLeft) {
+        self.navigationItem.leftBarButtonItem = item;
+    }else{
+        self.navigationItem.rightBarButtonItem = item;
+    }
+    
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
