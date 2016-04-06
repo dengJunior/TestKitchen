@@ -36,3 +36,23 @@
 
 @end
 
+@implementation CommunityNewsCommentModel
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"id":@"cId"}];
+}
+
+
+@end
+
+@implementation CommunityNewsLikeModel
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"id":@"lId"}];
+}
+
+
+@end
+

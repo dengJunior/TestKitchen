@@ -39,6 +39,11 @@
         [self.collView registerNib:[UINib nibWithNibName:@"CommunityNewsCell" bundle:nil] forCellWithReuseIdentifier:kNewsCellID];
         [self addSubview:self.collView];
         
+        //下拉刷新
+        self.collView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHeader)];
+        
+        self.collView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(refreshFooter)];
+        
         
     }
     return self;
@@ -50,7 +55,35 @@
     _newsModel = newsModel;
     
     [self.collView reloadData];
+    
+    if (newsModel.data.total.intValue == newsModel.data.data.count) {
+        self.collView.mj_footer.hidden = YES;
+    }
+    
+    
 }
+
+-(void)endRefresh
+{
+    [self.collView.mj_header endRefreshing];
+    [self.collView.mj_footer endRefreshing];
+    
+}
+
+- (void)refreshHeader
+{
+    if (self.refreshBlock) {
+        self.refreshBlock(YES);
+    }
+}
+
+- (void)refreshFooter
+{
+    if (self.refreshBlock) {
+        self.refreshBlock(NO);
+    }
+}
+
 
 #pragma mark - UICollectionView代理
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

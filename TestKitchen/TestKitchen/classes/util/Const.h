@@ -31,6 +31,9 @@ typedef NS_ENUM(NSInteger, LinkType){
     LinkTypeScene,                       //场景
     LinkTypeTalent,                      //推荐达人
     LinkTypePost,                        //
+    LinkTypeUser,                        //用户详情
+    LinkTypeMarrow,                      //精选作品
+    LinkTypeTopic,                       //专题
 };
 
 

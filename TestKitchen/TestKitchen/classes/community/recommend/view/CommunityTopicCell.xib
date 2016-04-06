@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="communityTopicCellId" id="KGk-i7-Jjw" customClass="CommunityTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aAj-Vd-HZZ">
+                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="QfU-Js-hBG"/>
+                            <constraint firstAttribute="height" constant="20" id="UXI-3G-Tnn"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="更多.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xrw-yV-CuM">
+                        <rect key="frame" x="345" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7c9-uz-SSS"/>
+                            <constraint firstAttribute="width" constant="20" id="Vhg-fN-fol"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rci-Kf-f37">
+                        <rect key="frame" x="40" y="10" width="160" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4mO-AK-JCz"/>
+                            <constraint firstAttribute="width" constant="160" id="XUe-bS-DlX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eW-QR-baT">
+                        <rect key="frame" x="0.0" y="40" width="375" height="89.5"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rci-Kf-f37" firstAttribute="leading" secondItem="aAj-Vd-HZZ" secondAttribute="trailing" constant="10" id="0zB-ja-6kK"/>
+                    <constraint firstItem="aAj-Vd-HZZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2jJ-mu-Epc"/>
+                    <constraint firstAttribute="bottom" secondItem="0eW-QR-baT" secondAttribute="bottom" id="5AX-eT-c5R"/>
+                    <constraint firstItem="aAj-Vd-HZZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="APe-ds-ny0"/>
+                    <constraint firstAttribute="trailing" secondItem="Xrw-yV-CuM" secondAttribute="trailing" constant="10" id="Cun-l3-aV0"/>
+                    <constraint firstItem="0eW-QR-baT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HzV-Ss-lV4"/>
+                    <constraint firstAttribute="trailing" secondItem="0eW-QR-baT" secondAttribute="trailing" id="U0m-2J-nsD"/>
+                    <constraint firstItem="0eW-QR-baT" firstAttribute="top" secondItem="rci-Kf-f37" secondAttribute="bottom" constant="10" id="hXi-Qb-vDM"/>
+                    <constraint firstItem="Xrw-yV-CuM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oG9-fW-Ll6"/>
+                    <constraint firstItem="rci-Kf-f37" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="u2r-29-D4j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myScrollView" destination="0eW-QR-baT" id="PmT-iI-fv1"/>
+                <outlet property="titleLabel" destination="rci-Kf-f37" id="7i3-Np-V2W"/>
+                <outlet property="typeImageView" destination="aAj-Vd-HZZ" id="sbh-AR-Phn"/>
+            </connections>
+            <point key="canvasLocation" x="332.5" y="407"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="更多.png" width="13" height="26"/>
+    </resources>
+</document>

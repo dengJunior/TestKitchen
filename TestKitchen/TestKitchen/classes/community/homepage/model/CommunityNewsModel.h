@@ -12,6 +12,8 @@
 @class CommunityNewsDataModel;
 @protocol CommunityNewsDetailModel;
 @protocol CommunityNewsTopicModel;
+@protocol CommunityNewsCommentModel;
+@protocol CommunityNewsLikeModel;
 @interface CommunityNewsModel : JSONModel
 
 @property (nonatomic,copy)NSString<Optional> *code;
@@ -30,7 +32,7 @@
 @property (nonatomic,strong)NSNumber<Optional> *size;
 @property (nonatomic,strong)NSNumber<Optional> *total;
 @property (nonatomic,strong)NSNumber<Optional> *count;
-@property (nonatomic,strong)NSArray<Optional,CommunityNewsDetailModel> *data;
+@property (nonatomic,strong)NSMutableArray<Optional,CommunityNewsDetailModel> *data;
 
 
 @end
@@ -55,8 +57,8 @@
 @property (nonatomic,copy)NSString<Optional> *delete_time;
 @property (nonatomic,copy)NSString<Optional> *share_url;
 @property (nonatomic,strong)NSArray<Optional, CommunityNewsTopicModel> *topics;
-@property (nonatomic,strong)NSArray<Optional> *comment;
-@property (nonatomic,strong)NSArray<Optional> *like;
+@property (nonatomic,strong)NSArray<Optional, CommunityNewsCommentModel> *comment;
+@property (nonatomic,strong)NSArray<Optional, CommunityNewsLikeModel> *like;
 
 
 @end
@@ -70,6 +72,32 @@
 @property (nonatomic,strong)NSNumber<Optional> *locx;
 @property (nonatomic,strong)NSNumber<Optional> *locy;
 @property (nonatomic,strong)NSNumber<Optional> *width;
+
+
+@end
+
+
+@interface CommunityNewsCommentModel : JSONModel
+
+@property (nonatomic,copy)NSString<Optional> *user_id;
+@property (nonatomic,copy)NSString<Optional> *nick;
+@property (nonatomic,copy)NSString<Optional> *head_img;
+@property (nonatomic,strong)NSNumber<Optional> *istalent;
+@property (nonatomic,copy)NSString<Optional> *cId;
+@property (nonatomic,copy)NSString<Optional> *content;
+@property (nonatomic,copy)NSString<Optional> *parent_id;
+@property (nonatomic,strong)NSArray<Optional,CommunityNewsCommentModel> *parents;
+
+@end
+
+@interface CommunityNewsLikeModel : JSONModel
+
+@property (nonatomic,copy)NSString<Optional> *user_id;
+@property (nonatomic,copy)NSString<Optional> *nick;
+@property (nonatomic,copy)NSString<Optional> *head_img;
+@property (nonatomic,strong)NSNumber<Optional> *istalent;
+@property (nonatomic,copy)NSString<Optional> *lId;
+
 
 
 @end

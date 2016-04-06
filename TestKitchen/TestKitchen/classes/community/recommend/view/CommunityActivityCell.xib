@@ -15,10 +15,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-Yw-nYq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                     </scrollView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-PP-EE4">
-                        <rect key="frame" x="195" y="72.5" width="160" height="37"/>
+                        <rect key="frame" x="195" y="72" width="160" height="37"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="37" id="7zW-43-n7I"/>
                             <constraint firstAttribute="width" constant="160" id="8ln-Jz-zXk"/>

@@ -10,6 +10,9 @@
 #import "KTCSegmentCtrl.h"
 #import "CommunityNewsModel.h"
 #import "CommunityNewsView.h"
+#import "CommunityRecommendModel.h"
+#import "CommunityRecommendView.h"
+
 
 @interface CommunityViewController ()<KTCSegmentCtrlDelegate,UIScrollViewDelegate>
 
@@ -21,8 +24,13 @@
 
 
 //关注
+@property (nonatomic,assign)NSInteger pageIndex;
+@property (nonatomic,strong)CommunityNewsModel *followModel;
 
 //推荐
+@property (nonatomic,strong)CommunityRecommendModel *recommendModel;
+@property (nonatomic,strong)CommunityRecommendView *recommendView;
+
 
 //最新
 @property (nonatomic,strong)NSString *lastId;
@@ -53,6 +61,39 @@
     
     //推荐的数据
     [self downloadRecommendData];
+    
+    //关注的数据
+    self.pageIndex = 1;
+    [self downloadFollowData];
+}
+
+
+//关注的数据
+- (void)downloadFollowData
+{
+    //methodName=ShequFollow&page=1&size=10&token=8ABD36C80D1639D9E81130766BE642B7&user_id=1386387&version=4.32
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:@"ShequFollow" forKey:@"methodName"];
+    [dict setObject:[NSString stringWithFormat:@"%ld",self.pageIndex] forKey:@"page"];
+    [dict setObject:@"10" forKey:@"size"];
+    
+    WS(ws)
+    [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
+        
+        ws.followModel = [[CommunityNewsModel alloc] initWithData:data error:nil];
+        
+        //在主线程刷新
+        [ws performSelectorOnMainThread:@selector(showFollowData) withObject:nil waitUntilDone:NO];
+        
+    } failBlock:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+}
+
+- (void)showFollowData
+{
+    
 }
 
 
@@ -62,13 +103,27 @@
     //methodName=ShequRecommend&token=8ABD36C80D1639D9E81130766BE642B7&user_id=1386387&version=4.33
     
     NSDictionary *dict = @{@"methodName":@"ShequRecommend"};
+    
+    WS(ws)
     [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
-        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", str);
+        
+        ws.recommendModel = [[CommunityRecommendModel alloc] initWithData:data error:nil];
+        
+        [ws performSelectorOnMainThread:@selector(showRecommendData) withObject:nil waitUntilDone:NO];
+        
     } failBlock:^(NSError *error) {
         NSLog(@"%@", error);
     }];
     
+}
+
+- (void)showRecommendData
+{
+    self.recommendView.clickBlock = ^(NSString *urlString, LinkType type) {
+    
+    };
+    
+    self.recommendView.model = self.recommendModel;
 }
 
 
@@ -85,6 +140,8 @@
     //关注
     
     //推荐
+    self.recommendView = [[CommunityRecommendView alloc] initWithFrame:CGRectMake(kScreenW, 0, kScreenW, self.scrollView.bounds.size.height)];
+    [self.scrollView addSubview:self.recommendView];
     
     //最新
     self.newsView = [[CommunityNewsView alloc] initWithFrame:CGRectMake(kScreenW*2, 0, kScreenW, self.scrollView.bounds.size.height)];
@@ -121,7 +178,14 @@
     WS(ws)
     [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
         
-        ws.newsModel = [[CommunityNewsModel alloc] initWithData:data error:nil];
+        CommunityNewsModel *model = [[CommunityNewsModel alloc] initWithData:data error:nil];
+
+        if ([ws.lastId isEqualToString:@"0"]) {
+            ws.newsModel = model;
+        }else{
+            [ws.newsModel.data.data addObjectsFromArray:model.data.data];
+        }
+        
         //主线程刷新UI
         [ws performSelectorOnMainThread:@selector(showNewsData) withObject:nil waitUntilDone:NO];
         
@@ -135,7 +199,7 @@
 
 - (void)showNewsData
 {
-    
+    WS(ws)
     self.newsView.clickUserBlock = ^(NSString *userId){
     
     };
@@ -144,7 +208,30 @@
     
     };
     
+    
+    self.newsView.refreshBlock = ^(BOOL isHeader){
+        if (isHeader) {
+            
+            ws.lastId = @"0";
+            
+            [ws downloadNewsData];
+            
+        }else{
+            
+            if (ws.newsModel.data.total.intValue > ws.newsModel.data.data.count) {
+                CommunityNewsDetailModel *model =  [ws.newsModel.data.data lastObject];
+                ws.lastId = model.dId;
+                
+                [ws downloadNewsData];
+            }
+            
+        }
+    };
+    
+    
     self.newsView.newsModel = self.newsModel;
+    
+    [self.newsView endRefresh];
 }
 
 

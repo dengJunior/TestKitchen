@@ -26,7 +26,7 @@
         CommunityActivityModel *model = activityArray[i];
         
         UIImageView *tmpImageView = [KTCUtil createImageView:nil];
-        tmpImageView.frame = CGRectMake(kScreenW*i, 0, kScreenW, 120);
+        tmpImageView.frame = CGRectMake(kScreenW*i, 0, kScreenW, 130);
         [tmpImageView sd_setImageWithURL:[NSURL URLWithString:model.image]];
         [self.myScrollView addSubview:tmpImageView];
         
@@ -39,7 +39,8 @@
     }
     
     self.myScrollView.delegate = self;
-    self.myScrollView.contentSize = CGSizeMake(kScreenW*activityArray.count, 120);
+    self.myScrollView.pagingEnabled = YES;
+    self.myScrollView.contentSize = CGSizeMake(kScreenW*activityArray.count, 130);
     
     //分页
     self.pageCtrl.numberOfPages = activityArray.count;
