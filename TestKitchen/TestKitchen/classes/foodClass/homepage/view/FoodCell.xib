@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCellId" id="KGk-i7-Jjw" customClass="FoodCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRf-Pr-SYd" userLabel="foodImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-YS-FJP" userLabel="nameLabel">
+                        <rect key="frame" x="30" y="95.5" width="315" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="7gr-Mg-qly"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JK4-4Z-OLf" userLabel="descLabel">
+                        <rect key="frame" x="30" y="129.5" width="315" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="atm-Rs-0Ph"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XRf-Pr-SYd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0EF-LC-E8x"/>
+                    <constraint firstAttribute="bottom" secondItem="JK4-4Z-OLf" secondAttribute="bottom" constant="10" id="4pH-DX-Jdf"/>
+                    <constraint firstAttribute="trailing" secondItem="YbL-YS-FJP" secondAttribute="trailing" constant="30" id="A6r-fh-Vxz"/>
+                    <constraint firstAttribute="bottom" secondItem="XRf-Pr-SYd" secondAttribute="bottom" id="Bn3-0i-DLw"/>
+                    <constraint firstItem="YbL-YS-FJP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="PrW-0q-6Gu"/>
+                    <constraint firstAttribute="trailing" secondItem="JK4-4Z-OLf" secondAttribute="trailing" constant="30" id="eX0-LJ-zks"/>
+                    <constraint firstItem="JK4-4Z-OLf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="nWQ-sT-sZF"/>
+                    <constraint firstItem="JK4-4Z-OLf" firstAttribute="top" secondItem="YbL-YS-FJP" secondAttribute="bottom" constant="10" id="nwO-xW-JcK"/>
+                    <constraint firstItem="XRf-Pr-SYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oVW-i2-dA7"/>
+                    <constraint firstAttribute="trailing" secondItem="XRf-Pr-SYd" secondAttribute="trailing" id="oVv-ZL-RLP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descLabel" destination="JK4-4Z-OLf" id="yoZ-R7-uw4"/>
+                <outlet property="foodImageView" destination="XRf-Pr-SYd" id="Mxn-n1-MmC"/>
+                <outlet property="nameLabel" destination="YbL-YS-FJP" id="4ht-hl-Lc8"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

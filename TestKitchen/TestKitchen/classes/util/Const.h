@@ -287,6 +287,8 @@ typedef NS_ENUM(NSInteger, LinkType){
 
 //三、商城
 //四、食课
+//methodName=CourseIndex&page=1&size=10&token=8ABD36C80D1639D9E81130766BE642B7&user_id=1386387&version=4.32
+
 //五、我的
 
 //注册

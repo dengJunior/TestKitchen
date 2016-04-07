@@ -88,6 +88,9 @@
 		4E14155B1CB56488002DB02C /* agree_p@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E14154F1CB56488002DB02C /* agree_p@3x.png */; };
 		4E14155C1CB56488002DB02C /* agree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1415501CB56488002DB02C /* agree@2x.png */; };
 		4E14155D1CB56488002DB02C /* agree@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1415511CB56488002DB02C /* agree@3x.png */; };
+		4E14156A1CB6876A002DB02C /* FoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1415691CB6876A002DB02C /* FoodModel.m */; };
+		4E14156E1CB68C79002DB02C /* FoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14156C1CB68C79002DB02C /* FoodCell.m */; };
+		4E14156F1CB68C79002DB02C /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E14156D1CB68C79002DB02C /* FoodCell.xib */; };
 		4E4764581CAEA61C003147F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4764571CAEA61C003147F5 /* main.m */; };
 		4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645A1CAEA61C003147F5 /* AppDelegate.m */; };
 		4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47645D1CAEA61C003147F5 /* ViewController.m */; };
@@ -318,6 +321,11 @@
 		4E14154F1CB56488002DB02C /* agree_p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agree_p@3x.png"; sourceTree = "<group>"; };
 		4E1415501CB56488002DB02C /* agree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agree@2x.png"; sourceTree = "<group>"; };
 		4E1415511CB56488002DB02C /* agree@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agree@3x.png"; sourceTree = "<group>"; };
+		4E1415681CB6876A002DB02C /* FoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodModel.h; sourceTree = "<group>"; };
+		4E1415691CB6876A002DB02C /* FoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodModel.m; sourceTree = "<group>"; };
+		4E14156B1CB68C79002DB02C /* FoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCell.h; sourceTree = "<group>"; };
+		4E14156C1CB68C79002DB02C /* FoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCell.m; sourceTree = "<group>"; };
+		4E14156D1CB68C79002DB02C /* FoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		4E4764531CAEA61C003147F5 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4764571CAEA61C003147F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E4764591CAEA61C003147F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1085,6 +1093,8 @@
 		4E47650F1CAF6C86003147F5 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4E1415681CB6876A002DB02C /* FoodModel.h */,
+				4E1415691CB6876A002DB02C /* FoodModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1092,6 +1102,9 @@
 		4E4765101CAF6C86003147F5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4E14156B1CB68C79002DB02C /* FoodCell.h */,
+				4E14156C1CB68C79002DB02C /* FoodCell.m */,
+				4E14156D1CB68C79002DB02C /* FoodCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1497,6 +1510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1414E71CB4FD6F002DB02C /* CommunityActivityCell.xib in Resources */,
+				4E14156F1CB68C79002DB02C /* FoodCell.xib in Resources */,
 				4E1414AA1CB4CEA6002DB02C /* search@2x.png in Resources */,
 				4E4765621CAF7597003147F5 /* home_normal@2x.png in Resources */,
 				4E4764661CAEA61C003147F5 /* LaunchScreen.storyboard in Resources */,
@@ -1606,7 +1620,9 @@
 				4E14152E1CB5555E002DB02C /* MJRefreshAutoGifFooter.m in Sources */,
 				4E1414611CB3A951002DB02C /* RecommendSceneCell.m in Sources */,
 				4E1414DE1CB4F66B002DB02C /* CommunityRecommendModel.m in Sources */,
+				4E14156E1CB68C79002DB02C /* FoodCell.m in Sources */,
 				4E4764FD1CAEAC9C003147F5 /* MASCompositeConstraint.m in Sources */,
+				4E14156A1CB6876A002DB02C /* FoodModel.m in Sources */,
 				4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */,
 				4E4764FF1CAEAC9C003147F5 /* MASConstraintMaker.m in Sources */,
 				4E1414E61CB4FD6F002DB02C /* CommunityActivityCell.m in Sources */,

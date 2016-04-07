@@ -24,6 +24,7 @@
 - (void)addNavTitle:(NSString *)title
 {
     UILabel *label = [KTCUtil createLabelText:title font:[UIFont boldSystemFontOfSize:20] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentCenter];
+    label.frame = CGRectMake(0, 0, kScreenW-160, 44);
     self.navigationItem.titleView = label;
 }
 
