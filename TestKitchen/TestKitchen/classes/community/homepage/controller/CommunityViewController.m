@@ -12,7 +12,7 @@
 #import "CommunityNewsView.h"
 #import "CommunityRecommendModel.h"
 #import "CommunityRecommendView.h"
-
+#import "CommunityFollowView.h"
 
 @interface CommunityViewController ()<KTCSegmentCtrlDelegate,UIScrollViewDelegate>
 
@@ -26,6 +26,7 @@
 //关注
 @property (nonatomic,assign)NSInteger pageIndex;
 @property (nonatomic,strong)CommunityNewsModel *followModel;
+@property (nonatomic,strong)CommunityFollowView *followView;
 
 //推荐
 @property (nonatomic,strong)CommunityRecommendModel *recommendModel;
@@ -80,9 +81,13 @@
     WS(ws)
     [KTCDownloader postWithUrlString:kHostUrl params:dict success:^(NSData *data) {
         
-        ws.followModel = [[CommunityNewsModel alloc] initWithData:data error:nil];
+        CommunityNewsModel *model = [[CommunityNewsModel alloc] initWithData:data error:nil];
         
-        //在主线程刷新
+        if (ws.pageIndex == 1) {
+            ws.followModel = model;
+        }else{
+            [ws.followModel.data.data addObjectsFromArray:model.data.data];
+        }        //在主线程刷新
         [ws performSelectorOnMainThread:@selector(showFollowData) withObject:nil waitUntilDone:NO];
         
     } failBlock:^(NSError *error) {
@@ -93,7 +98,32 @@
 
 - (void)showFollowData
 {
+    self.followView.userBlock = ^(NSString *userId){
     
+    };
+    
+    //刷新
+    WS(ws)
+    self.followView.refreshBlock = ^(BOOL isHeader){
+        if (isHeader) {
+            
+            ws.pageIndex = 1;
+            
+            [ws downloadFollowData];
+            
+        }else{
+            
+            if (ws.newsModel.data.total.intValue > ws.newsModel.data.data.count) {
+                ws.pageIndex ++;                
+                [ws downloadFollowData];
+            }
+            
+        }
+    };
+    
+    self.followView.newsModel = self.followModel;
+    
+    [self.followView endRefresh];
 }
 
 
@@ -138,6 +168,8 @@
     
     
     //关注
+    self.followView = [[CommunityFollowView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, self.scrollView.bounds.size.height)];
+    [self.scrollView addSubview:self.followView];
     
     //推荐
     self.recommendView = [[CommunityRecommendView alloc] initWithFrame:CGRectMake(kScreenW, 0, kScreenW, self.scrollView.bounds.size.height)];

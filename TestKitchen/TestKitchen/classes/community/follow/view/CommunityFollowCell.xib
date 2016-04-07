@@ -29,13 +29,15 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb4-Uh-602" userLabel="userBtn">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb4-Uh-602" userLabel="userBtn">
                         <rect key="frame" x="10" y="300" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="DCp-IH-6Ua"/>
                             <constraint firstAttribute="width" constant="40" id="OtL-3h-dsO"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickUserBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1gb-0E-Lb6"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYJ-nx-Cl3" userLabel="timeLabel">
                         <rect key="frame" x="60" y="320" width="160" height="20"/>
@@ -73,68 +75,78 @@
                         </constraints>
                         <state key="normal" backgroundImage="更多.png"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5v-KL-Eth" userLabel="firstBtn">
+                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5v-KL-Eth" userLabel="firstBtn">
                         <rect key="frame" x="10" y="350" width="54" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="xKv-ap-WrY"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wta-EF-EJm"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-5f-Ch6" userLabel="secondBtn">
+                    <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-5f-Ch6" userLabel="secondBtn">
                         <rect key="frame" x="74" y="350" width="54" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="u0u-jB-YDe"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ggA-Q4-tBu"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHo-Ha-XSQ" userLabel="thirdBtn">
+                    <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHo-Ha-XSQ" userLabel="thirdBtn">
                         <rect key="frame" x="138" y="350" width="54" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="HaG-iP-ObD"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="boc-Pr-6Ai"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbt-wI-7U4" userLabel="fourthBtn">
+                    <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbt-wI-7U4" userLabel="fourthBtn">
                         <rect key="frame" x="202" y="350" width="54.5" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="3kh-YL-PAc"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NYY-7m-hvH"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-GW-ukG" userLabel="fifthBtn">
+                    <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-GW-ukG" userLabel="fifthBtn">
                         <rect key="frame" x="267" y="350" width="54" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="rHQ-x6-QCp"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="clickBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CU8-nS-wzq"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-dQ-1kH" userLabel="commentView">
-                        <rect key="frame" x="0.0" y="390" width="375" height="10"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="0.0" y="398" width="375" height="10"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="Qow-Xm-iB0"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvb-sR-8Zb" userLabel="prizeBtn">
-                        <rect key="frame" x="20" y="420" width="20" height="20"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvb-sR-8Zb" userLabel="agreeBtn">
+                        <rect key="frame" x="20" y="428" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="BZB-TR-N8w"/>
                             <constraint firstAttribute="width" constant="20" id="Zmf-XZ-2GK"/>
                         </constraints>
                         <state key="normal" backgroundImage="agree.png"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO8-XU-W7x" userLabel="prizeLabel">
-                        <rect key="frame" x="50" y="422" width="40" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO8-XU-W7x" userLabel="agreeLabel">
+                        <rect key="frame" x="50" y="430" width="40" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Kz8-Yl-fNm"/>
                             <constraint firstAttribute="width" constant="40" id="aja-FW-6F2"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJi-Zz-yhh" userLabel="commentBtn">
-                        <rect key="frame" x="130" y="420" width="20" height="20"/>
+                        <rect key="frame" x="130" y="428" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="5rl-UI-agy"/>
                             <constraint firstAttribute="height" constant="20" id="YYc-vn-TZ2"/>
@@ -142,7 +154,7 @@
                         <state key="normal" backgroundImage="评论.png"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV8-V8-BoQ" userLabel="shareBtn">
-                        <rect key="frame" x="275" y="420" width="20" height="20"/>
+                        <rect key="frame" x="275" y="428" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="VL7-fg-f7p"/>
                             <constraint firstAttribute="height" constant="20" id="c7V-B2-eG7"/>
@@ -150,13 +162,13 @@
                         <state key="normal" title="Button" backgroundImage="分享.png"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAX-ry-tvk" userLabel="commentLabel">
-                        <rect key="frame" x="160" y="420" width="40" height="20"/>
+                        <rect key="frame" x="160" y="428" width="40" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="3Gz-mQ-fyo"/>
                             <constraint firstAttribute="height" constant="20" id="B6X-zk-gjY"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -182,7 +194,7 @@
                     <constraint firstItem="Jmd-qj-mkD" firstAttribute="top" secondItem="7zn-Yv-dEM" secondAttribute="bottom" constant="10" id="RPh-LK-wRw"/>
                     <constraint firstItem="Hxa-GW-ukG" firstAttribute="width" secondItem="C5v-KL-Eth" secondAttribute="width" id="Rr1-Fh-ZDt"/>
                     <constraint firstItem="AJi-Zz-yhh" firstAttribute="top" secondItem="SeW-dQ-1kH" secondAttribute="bottom" constant="20" id="T6y-ra-uxl"/>
-                    <constraint firstItem="SeW-dQ-1kH" firstAttribute="top" secondItem="IYJ-nx-Cl3" secondAttribute="bottom" constant="50" id="Te5-dT-TyS"/>
+                    <constraint firstItem="SeW-dQ-1kH" firstAttribute="top" secondItem="IYJ-nx-Cl3" secondAttribute="bottom" constant="58" id="Te5-dT-TyS"/>
                     <constraint firstItem="mb4-Uh-602" firstAttribute="top" secondItem="7zn-Yv-dEM" secondAttribute="bottom" constant="10" id="UJR-nG-bMm"/>
                     <constraint firstItem="FHo-Ha-XSQ" firstAttribute="top" secondItem="IYJ-nx-Cl3" secondAttribute="bottom" constant="10" id="VWZ-P7-1wa"/>
                     <constraint firstItem="933-6K-Pse" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VuV-tk-CO1"/>
@@ -207,6 +219,20 @@
                     <constraint firstAttribute="trailing" secondItem="7zn-Yv-dEM" secondAttribute="trailing" constant="10" id="z8a-Fi-6zp"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="agreeBtn" destination="bvb-sR-8Zb" id="4sX-9X-Wfa"/>
+                <outlet property="agreeLabel" destination="HO8-XU-W7x" id="YEk-5z-FUs"/>
+                <outlet property="commentBtn" destination="AJi-Zz-yhh" id="Gwr-ve-dBO"/>
+                <outlet property="commentLabel" destination="uAX-ry-tvk" id="nXV-1p-GWz"/>
+                <outlet property="commentView" destination="SeW-dQ-1kH" id="8jN-ah-vcY"/>
+                <outlet property="commentViewHCons" destination="Qow-Xm-iB0" id="9ZH-7g-eno"/>
+                <outlet property="contentLabel" destination="7zn-Yv-dEM" id="H0x-aV-UXR"/>
+                <outlet property="nameLabel" destination="Jmd-qj-mkD" id="xlp-zs-cZb"/>
+                <outlet property="shareBtn" destination="dV8-V8-BoQ" id="fzZ-F5-dzB"/>
+                <outlet property="timeLabel" destination="IYJ-nx-Cl3" id="e2r-CC-iuo"/>
+                <outlet property="topImageView" destination="933-6K-Pse" id="fHr-Uo-ruQ"/>
+                <outlet property="userBtn" destination="mb4-Uh-602" id="u8b-7C-cgd"/>
+            </connections>
             <point key="canvasLocation" x="445.5" y="407"/>
         </tableViewCell>
     </objects>

@@ -73,7 +73,10 @@
 {
     NSInteger index = btn.tag-100;
     
+    self.selectedIndex = index;
+    
     if (self.delegate) {
+        
         [self.delegate didSelectSegCtrlAtIndex:index];
     }
 }
