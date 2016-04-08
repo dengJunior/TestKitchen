@@ -15,4 +15,7 @@
 //导航按钮
 - (void)addNavBtnImage:(NSString *)imageName target:(id)target action:(SEL)action isLeft:(BOOL)isLeft;
 
+//返回按钮
+- (void)addBackBtnTarget:(id)target action:(SEL)action;
+
 @end

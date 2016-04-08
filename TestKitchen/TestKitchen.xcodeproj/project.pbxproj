@@ -179,6 +179,8 @@
 		4E47658F1CB21DD8003147F5 /* FoodRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E47658D1CB21DD8003147F5 /* FoodRecordCell.xib */; };
 		4E4765921CB22FCC003147F5 /* RecommendHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */; };
 		4E4765941CB340A4003147F5 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4765931CB340A4003147F5 /* more_icon.png */; };
+		4E577BDD1CB7C40B00C0A0D1 /* nav_back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E577BDC1CB7C40B00C0A0D1 /* nav_back_black.png */; };
+		4E577BE41CB7CBF800C0A0D1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -482,6 +484,9 @@
 		4E4765901CB22FCC003147F5 /* RecommendHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendHeaderView.h; sourceTree = "<group>"; };
 		4E4765911CB22FCC003147F5 /* RecommendHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendHeaderView.m; sourceTree = "<group>"; };
 		4E4765931CB340A4003147F5 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
+		4E577BDC1CB7C40B00C0A0D1 /* nav_back_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_black.png; sourceTree = "<group>"; };
+		4E577BE21CB7CBF800C0A0D1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -891,6 +896,7 @@
 		4E4764891CAEAB35003147F5 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4E577BDE1CB7CBD600C0A0D1 /* common */,
 				4E4765071CAF6C86003147F5 /* community */,
 				4E47650C1CAF6C86003147F5 /* foodClass */,
 				4E4765111CAF6C86003147F5 /* mall */,
@@ -1305,6 +1311,7 @@
 		4E4765221CAF6C91003147F5 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				4E577BDB1CB7C40B00C0A0D1 /* nav */,
 				4E4765451CAF7597003147F5 /* tab */,
 			);
 			path = common;
@@ -1404,6 +1411,47 @@
 				4E47655D1CAF7597003147F5 /* shop_select@3x.png */,
 			);
 			path = tab;
+			sourceTree = "<group>";
+		};
+		4E577BDB1CB7C40B00C0A0D1 /* nav */ = {
+			isa = PBXGroup;
+			children = (
+				4E577BDC1CB7C40B00C0A0D1 /* nav_back_black.png */,
+			);
+			path = nav;
+			sourceTree = "<group>";
+		};
+		4E577BDE1CB7CBD600C0A0D1 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				4E577BDF1CB7CBD600C0A0D1 /* controller */,
+				4E577BE01CB7CBD600C0A0D1 /* model */,
+				4E577BE11CB7CBD600C0A0D1 /* view */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		4E577BDF1CB7CBD600C0A0D1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E577BE21CB7CBF800C0A0D1 /* WebViewController.h */,
+				4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E577BE01CB7CBD600C0A0D1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E577BE11CB7CBD600C0A0D1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1565,6 +1613,7 @@
 				4E1415571CB56488002DB02C /* 评论_p@3x.png in Resources */,
 				4E14155A1CB56488002DB02C /* agree_p@2x.png in Resources */,
 				4E1414F21CB50791002DB02C /* 达人.png in Resources */,
+				4E577BDD1CB7C40B00C0A0D1 /* nav_back_black.png in Resources */,
 				4E47656E1CAF7597003147F5 /* shike_normal@2x.png in Resources */,
 				4E14145C1CB39EF3002DB02C /* play-A@2x.png in Resources */,
 				4E1414F41CB50791002DB02C /* 精品.png in Resources */,
@@ -1663,6 +1712,7 @@
 				4E4765361CAF6D09003147F5 /* FoodViewController.m in Sources */,
 				4E1414DF1CB4F66B002DB02C /* CommunityNewsCell.m in Sources */,
 				4E1414DC1CB4F66B002DB02C /* CommunityViewController.m in Sources */,
+				4E577BE41CB7CBF800C0A0D1 /* WebViewController.m in Sources */,
 				4E4765391CAF6D22003147F5 /* ShoppingMallViewController.m in Sources */,
 				4E47645B1CAEA61C003147F5 /* AppDelegate.m in Sources */,
 				4E14152C1CB5555E002DB02C /* MJRefreshFooter.m in Sources */,

@@ -12,6 +12,9 @@
 #import "MaterialModel.h"
 #import "MaterialView.h"
 #import "KTCSegmentCtrl.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "WebViewController.h"
 
 @interface RecipeViewController ()<UIScrollViewDelegate,KTCSegmentCtrlDelegate>
 
@@ -218,8 +221,17 @@
 - (void)showRecommendView
 {
     //点击事件
+    WS(ws)
     self.recommendView.clickBlock = ^(NSString *urlString, LinkType type){
-    
+        
+        if (type == LinkTypeVideo) {
+            //视频
+            [ws playVideo:urlString];
+        }else if (type == LinkTypeHTML) {
+            //网页
+            [ws gotoHTMLPage:urlString];
+        }
+        
     };
     
     self.recommendView.rModel = self.recommendModel;
@@ -231,6 +243,28 @@
 }
 
 #pragma mark - 界面跳转
+
+//视频播放
+- (void)playVideo:(NSString *)urlString
+{
+    AVPlayerViewController *ctrl = [[AVPlayerViewController alloc] init];
+    
+    AVPlayer *player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:urlString]];
+    ctrl.player = player;
+    
+    [player play];
+    
+    [self presentViewController:ctrl animated:YES completion:nil];
+}
+
+//网页
+- (void)gotoHTMLPage:(NSString *)urlString
+{
+    WebViewController *ctrl = [[WebViewController alloc] init];
+    ctrl.urlString = urlString;
+    
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
 
 
 #pragma mark - 选择控件的代理

@@ -44,6 +44,14 @@
 }
 
 
+-(void)addBackBtnTarget:(id)target action:(SEL)action
+{
+    
+    [self addNavBtnImage:@"nav_back_black" target:target action:action isLeft:YES];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
