@@ -83,7 +83,7 @@
     RecommendDataBannerModel *bannerModel = self.bannerArray[index];
     
     if (self.clickBlock) {
-        self.clickBlock(bannerModel.banner_link, LinkTypeFoodCourseSerial);
+        self.clickBlock(bannerModel.banner_link, bannerModel.banner_title,LinkTypeFoodCourseSerial);
     }
 }
 

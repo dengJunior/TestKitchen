@@ -48,7 +48,7 @@
         RecommendWidgetDataModel *model = self.listModel.widget_data[index];
         if (self.clickBlock) {
             if ([model.link rangeOfString:@"app://food_course_series"].location != NSNotFound) {
-                self.clickBlock(model.link, LinkTypeFoodCourseSerial);
+                self.clickBlock(model.link, nil, LinkTypeFoodCourseSerial);
             }
         }
         

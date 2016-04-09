@@ -51,12 +51,10 @@ typedef NS_ENUM(NSInteger, LinkType){
 //methodName=SceneHome&token=&user_id=&version=4.32
 
 //1)广告
-//详情
-#define kAdDetailDayUrl  (@"http://api.izhangchu.com/?appVersion=4.3.2&sysVersion=9.2.1&devModel=iPhone")
+//广告详情
 //methodName=CourseSeriesView&series_id=22&token=&user_id=&version=4.32
 
-//分享
-#define kAdDetailShareUrl  (@"http://api.izhangchu.com/?appVersion=4.3.2&sysVersion=9.2.1&devModel=iPhone")
+//广告分享
 //methodName=AppShare&shareID=&shareModule=course&token=&user_id=&version=4.32
 
 //评论

@@ -64,7 +64,7 @@
         RecommendWidgetDataModel *widgetModel = self.listModel.widget_data[index*4];
         if ([widgetModel.type isEqualToString:@"image"]) {
             if (self.clickBlock && [widgetModel.link rangeOfString:@"app://dish"].location != NSNotFound) {
-                self.clickBlock(widgetModel.link, LinkTypeDish);
+                self.clickBlock(widgetModel.link, nil,LinkTypeDish);
             }
         }
     }
@@ -78,7 +78,7 @@
         RecommendWidgetDataModel *widgetModel = self.listModel.widget_data[index*4+1];
         if ([widgetModel.type isEqualToString:@"video"]) {
             if (self.clickBlock) {
-                self.clickBlock(widgetModel.content, LinkTypeVideo);
+                self.clickBlock(widgetModel.content, nil, LinkTypeVideo);
             }
         }
     }

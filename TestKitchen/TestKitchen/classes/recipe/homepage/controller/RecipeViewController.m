@@ -222,7 +222,7 @@
 {
     //点击事件
     WS(ws)
-    self.recommendView.clickBlock = ^(NSString *urlString, LinkType type){
+    self.recommendView.clickBlock = ^(NSString *urlString ,NSString *title, LinkType type){
         
         if (type == LinkTypeVideo) {
             //视频

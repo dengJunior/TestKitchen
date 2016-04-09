@@ -74,7 +74,7 @@
         RecommendWidgetDataModel *videoModel = self.modelArray[1];
         if ([videoModel.type isEqualToString:@"video"]) {
             if (self.clickBlock) {
-                self.clickBlock(videoModel.content, LinkTypeVideo);
+                self.clickBlock(videoModel.content, nil,LinkTypeVideo);
             }
         }
     }

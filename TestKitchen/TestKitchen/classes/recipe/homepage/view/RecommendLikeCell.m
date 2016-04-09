@@ -57,16 +57,16 @@
             if (self.clickBlock) {
                 if ([imageModel.link hasSuffix:@".html"]) {
                     //网页
-                    self.clickBlock(imageModel.link, LinkTypeHTML);
+                    self.clickBlock(imageModel.link, @"新手入门", LinkTypeHTML);
                 }else if ([imageModel.link rangeOfString:@"app://foodmatch"].location != NSNotFound) {
                     //食材搭配
-                    self.clickBlock(imageModel.link,LinkTypeFoodMatch);
+                    self.clickBlock(imageModel.link,@"食材搭配",LinkTypeFoodMatch);
                 }else if ([imageModel.link rangeOfString:@"app://scenelist"].location != NSNotFound) {
                     //场景菜谱
-                    self.clickBlock(imageModel.link,LinkTypeSceneList);
+                    self.clickBlock(imageModel.link,@"全部场景",LinkTypeSceneList);
                 }else if ([imageModel.link rangeOfString:@"app://favorites"].location != NSNotFound) {
                     //猜你喜欢
-                    self.clickBlock(imageModel.link,LinkTypeFavorites);
+                    self.clickBlock(imageModel.link,@"喜欢",LinkTypeFavorites);
                 }
                 
             }

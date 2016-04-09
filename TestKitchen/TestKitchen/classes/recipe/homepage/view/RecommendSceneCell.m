@@ -77,7 +77,7 @@
         RecommendWidgetDataModel *imageModel = self.listModel.widget_data[0];
         if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://scene"].location != NSNotFound) {
             if (self.clickBlock) {
-                self.clickBlock(imageModel.link, LinkTypeScene);
+                self.clickBlock(imageModel.link, nil,LinkTypeScene);
             }
         }
     }
@@ -91,7 +91,7 @@
         RecommendWidgetDataModel *imageModel = self.listModel.widget_data[3+index*2];
         if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://dish"].location != NSNotFound) {
             if (self.clickBlock) {
-                self.clickBlock(imageModel.link, LinkTypeDish);
+                self.clickBlock(imageModel.link, nil,LinkTypeDish);
             }
         }
     }
@@ -105,7 +105,7 @@
         RecommendWidgetDataModel *imageModel = self.listModel.widget_data[3+index*2+1];
         if ([imageModel.type isEqualToString:@"video"]) {
             if (self.clickBlock) {
-                self.clickBlock(imageModel.content, LinkTypeVideo);
+                self.clickBlock(imageModel.content, nil,LinkTypeVideo);
             }
         }
     }

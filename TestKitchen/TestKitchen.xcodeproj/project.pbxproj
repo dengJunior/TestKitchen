@@ -181,6 +181,7 @@
 		4E4765941CB340A4003147F5 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4765931CB340A4003147F5 /* more_icon.png */; };
 		4E577BDD1CB7C40B00C0A0D1 /* nav_back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E577BDC1CB7C40B00C0A0D1 /* nav_back_black.png */; };
 		4E577BE41CB7CBF800C0A0D1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */; };
+		4E577BFF1CB8FBB100C0A0D1 /* FoodCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E577BFE1CB8FBB100C0A0D1 /* FoodCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -487,6 +488,8 @@
 		4E577BDC1CB7C40B00C0A0D1 /* nav_back_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_black.png; sourceTree = "<group>"; };
 		4E577BE21CB7CBF800C0A0D1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4E577BFD1CB8FBB100C0A0D1 /* FoodCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCourseViewController.h; sourceTree = "<group>"; };
+		4E577BFE1CB8FBB100C0A0D1 /* FoodCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1200,6 +1203,7 @@
 		4E47651B1CAF6C86003147F5 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				4E577BF91CB8FB8F00C0A0D1 /* recipe */,
 				4E1414841CB412E7002DB02C /* category */,
 				4E1414881CB412E7002DB02C /* material */,
 				4E47651C1CAF6C86003147F5 /* homepage */,
@@ -1454,6 +1458,39 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		4E577BF91CB8FB8F00C0A0D1 /* recipe */ = {
+			isa = PBXGroup;
+			children = (
+				4E577BFA1CB8FB8F00C0A0D1 /* controller */,
+				4E577BFB1CB8FB8F00C0A0D1 /* model */,
+				4E577BFC1CB8FB8F00C0A0D1 /* view */,
+			);
+			path = recipe;
+			sourceTree = "<group>";
+		};
+		4E577BFA1CB8FB8F00C0A0D1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E577BFD1CB8FBB100C0A0D1 /* FoodCourseViewController.h */,
+				4E577BFE1CB8FBB100C0A0D1 /* FoodCourseViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4E577BFB1CB8FB8F00C0A0D1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4E577BFC1CB8FB8F00C0A0D1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1673,6 +1710,7 @@
 				4E4764FD1CAEAC9C003147F5 /* MASCompositeConstraint.m in Sources */,
 				4E14156A1CB6876A002DB02C /* FoodModel.m in Sources */,
 				4E47652A1CAF6CAF003147F5 /* MainTabBarController.m in Sources */,
+				4E577BFF1CB8FBB100C0A0D1 /* FoodCourseViewController.m in Sources */,
 				4E4764FF1CAEAC9C003147F5 /* MASConstraintMaker.m in Sources */,
 				4E1414E61CB4FD6F002DB02C /* CommunityActivityCell.m in Sources */,
 				4E4764CE1CAEAC71003147F5 /* JSONAPI.m in Sources */,

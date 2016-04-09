@@ -17,7 +17,7 @@
 - (IBAction)playAction:(UIButton *)sender;
 
 //点击事件
-@property (nonatomic,strong)void (^clickBlock)(NSString *urlString,LinkType type);
+@property (nonatomic,strong)void (^clickBlock)(NSString *urlString,NSString *title ,LinkType type);
 
 //显示数据
 @property (nonatomic,strong)RecommendDataWidgetListModel *listModel;

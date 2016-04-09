@@ -458,7 +458,7 @@
             //场景菜谱
             if ([listModel.title_link rangeOfString:@"app://scenelist"].location != NSNotFound) {
                 if (self.clickBlock) {
-                    self.clickBlock(listModel.title_link, LinkTypeSceneList);
+                    self.clickBlock(listModel.title_link, listModel.title,LinkTypeSceneList);
                 }
             }
         }else if (listModel.widget_type.intValue == 6){
@@ -467,7 +467,7 @@
                 RecommendWidgetDataModel *imageModel = listModel.widget_data[6*indexPath.row];
                 if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://dish"].location != NSNotFound) {
                     if (self.clickBlock) {
-                        self.clickBlock(imageModel.link, LinkTypeDish);
+                        self.clickBlock(imageModel.link,listModel.title, LinkTypeDish);
                     }
                 }
             }
@@ -478,7 +478,7 @@
                 RecommendWidgetDataModel *imageModel = listModel.widget_data[4*indexPath.row];
                 if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://talent"].location != NSNotFound) {
                     if (self.clickBlock) {
-                        self.clickBlock(imageModel.link, LinkTypeTalent);
+                        self.clickBlock(imageModel.link,listModel.title, LinkTypeTalent);
                     }
                 }
             }
@@ -487,7 +487,7 @@
             RecommendWidgetDataModel *imageModel = listModel.widget_data[3*indexPath.row];
             if ([imageModel.type isEqualToString:@"image"]) {
                 if (self.clickBlock) {
-                    self.clickBlock(imageModel.link, LinkTypeHTML);
+                    self.clickBlock(imageModel.link,listModel.title, LinkTypeHTML);
                 }
             }
         }

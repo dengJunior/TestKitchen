@@ -66,7 +66,7 @@
         RecommendWidgetDataModel *imageModel = self.listModel.widget_data[3*index];
         if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://post"].location != NSNotFound) {
             if (self.clickBlock) {
-                self.clickBlock(imageModel.link, LinkTypePost);
+                self.clickBlock(imageModel.link, nil,LinkTypePost);
             }
         }
         
@@ -81,7 +81,7 @@
         RecommendWidgetDataModel *imageModel = self.listModel.widget_data[3*index+1];
         if ([imageModel.type isEqualToString:@"image"] && [imageModel.link rangeOfString:@"app://talent"].location != NSNotFound) {
             if (self.clickBlock) {
-                self.clickBlock(imageModel.link, LinkTypeTalent);
+                self.clickBlock(imageModel.link, nil, LinkTypeTalent);
             }
         }
         
