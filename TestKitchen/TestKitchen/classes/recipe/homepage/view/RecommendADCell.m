@@ -81,10 +81,20 @@
     NSInteger index = g.view.tag-100;
     
     RecommendDataBannerModel *bannerModel = self.bannerArray[index];
-    
-    if (self.clickBlock) {
-        self.clickBlock(bannerModel.banner_link, bannerModel.banner_title,LinkTypeFoodCourseSerial);
+    if ([bannerModel.banner_link hasPrefix:@"app://food_course_series"]) {
+        NSArray *array = [bannerModel.banner_link componentsSeparatedByString:@"#"];
+        if (array.count > 1) {
+            if (self.clickBlock) {
+                self.clickBlock(array[1], bannerModel.banner_title,LinkTypeFoodCourseSerial);
+            }
+        }
+    }else if ([bannerModel.banner_link rangeOfString:@"html"].location != NSNotFound){
+        if (self.clickBlock) {
+            self.clickBlock(bannerModel.banner_link, bannerModel.banner_title, LinkTypeHTML);
+        }
     }
+    
+    
 }
 
 - (void)awakeFromNib {

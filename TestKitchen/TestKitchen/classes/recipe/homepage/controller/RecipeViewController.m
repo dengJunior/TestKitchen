@@ -15,6 +15,9 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "WebViewController.h"
+#import "ADDetailViewController.h"
+#import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface RecipeViewController ()<UIScrollViewDelegate,KTCSegmentCtrlDelegate>
 
@@ -40,6 +43,26 @@
 @end
 
 @implementation RecipeViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //显示tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar showTabBar];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    //隐藏tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar hideTabBar];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,7 +91,7 @@
 - (void)createMyNav
 {
     //扫一扫
-    [self addNavBtnImage:@"saoyisao" target:self action:@selector(scanAction) isLeft:YES];
+    [self addNavBtnImages:@[@"saoyisao"] target:self action:@selector(scanAction) isLeft:YES];
     
     
     self.segCtrl = [[KTCSegmentCtrl alloc] initWithFrame:CGRectMake(80, 0, kScreenW-80*2, 44) titleArray:@[@"推荐",@"食材",@"分类"]];
@@ -76,7 +99,7 @@
     self.navigationItem.titleView = self.segCtrl;
     
     //搜索
-    [self addNavBtnImage:@"search" target:self action:@selector(searchAction) isLeft:NO];
+    [self addNavBtnImages:@[@"search"] target:self action:@selector(searchAction) isLeft:NO];
     
     
 }
@@ -229,7 +252,10 @@
             [ws playVideo:urlString];
         }else if (type == LinkTypeHTML) {
             //网页
-            [ws gotoHTMLPage:urlString];
+            [ws gotoHTMLPage:urlString titleStr:title];
+        }else if (type == LinkTypeFoodCourseSerial){
+            //视频课程
+            [ws gotoFoodCoursePage:urlString];
         }
         
     };
@@ -258,12 +284,21 @@
 }
 
 //网页
-- (void)gotoHTMLPage:(NSString *)urlString
+- (void)gotoHTMLPage:(NSString *)urlString titleStr:(NSString *)titleStr
 {
     WebViewController *ctrl = [[WebViewController alloc] init];
     ctrl.urlString = urlString;
-    
+    ctrl.title = titleStr;
     [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+//视频课程
+- (void)gotoFoodCoursePage:(NSString *)serialId
+{
+    ADDetailViewController *fCtrl = [[ADDetailViewController alloc] init];
+    fCtrl.serialId = serialId;
+    
+    [self.navigationController pushViewController:fCtrl animated:YES];
 }
 
 

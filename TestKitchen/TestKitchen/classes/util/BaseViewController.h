@@ -13,7 +13,7 @@
 //导航标题
 - (void)addNavTitle:(NSString *)title;
 //导航按钮
-- (void)addNavBtnImage:(NSString *)imageName target:(id)target action:(SEL)action isLeft:(BOOL)isLeft;
+- (void)addNavBtnImages:(NSArray *)imageArray target:(id)target action:(SEL)action isLeft:(BOOL)isLeft;
 
 //返回按钮
 - (void)addBackBtnTarget:(id)target action:(SEL)action;

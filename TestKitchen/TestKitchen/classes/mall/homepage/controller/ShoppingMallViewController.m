@@ -7,12 +7,35 @@
 //
 
 #import "ShoppingMallViewController.h"
+#import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface ShoppingMallViewController ()
 
 @end
 
 @implementation ShoppingMallViewController
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //显示tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar showTabBar];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    //隐藏tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar hideTabBar];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

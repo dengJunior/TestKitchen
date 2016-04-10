@@ -119,6 +119,22 @@
     
 }
 
+-(void)hideTabBar
+{
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.05 animations:^{
+        weakSelf.bgTabView.hidden = YES;
+    }];
+}
+
+-(void)showTabBar
+{
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.05 animations:^{
+        weakSelf.bgTabView.hidden = NO;
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

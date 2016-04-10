@@ -10,4 +10,10 @@
 
 @interface MainTabBarController : UITabBarController
 
+
+//隐藏tabbar
+- (void)hideTabBar;
+//显示tabbar
+- (void)showTabBar;
+
 @end

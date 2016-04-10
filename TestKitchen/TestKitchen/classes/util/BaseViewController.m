@@ -24,31 +24,38 @@
 - (void)addNavTitle:(NSString *)title
 {
     UILabel *label = [KTCUtil createLabelText:title font:[UIFont boldSystemFontOfSize:20] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentCenter];
-    label.frame = CGRectMake(0, 0, kScreenW-160, 44);
+    label.frame = CGRectMake(80, 0, kScreenW-160, 44);
     self.navigationItem.titleView = label;
 }
 
-
-- (void)addNavBtnImage:(NSString *)imageName target:(id)target action:(SEL)action isLeft:(BOOL)isLeft
+-(void)addNavBtnImages:(NSArray *)imageArray target:(id)target action:(SEL)action isLeft:(BOOL)isLeft
 {
-    UIButton *btn = [KTCUtil createBtnTitle:nil imageName:imageName selectImageName:nil target:target action:action];
-    btn.frame = CGRectMake(0, 8, 32, 32);
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    NSMutableArray *btnArray = [NSMutableArray array];
+    for (int i=0; i<imageArray.count; i++) {
+        NSString *imageName = imageArray[i];
+        
+        UIButton *btn = [KTCUtil createBtnTitle:nil imageName:imageName selectImageName:nil target:target action:action];
+        btn.frame = CGRectMake(0, 8, 32, 32);
+        btn.tag = 300+i;
+        
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        [btnArray addObject:item];
+    }    
+    
     
     if (isLeft) {
-        self.navigationItem.leftBarButtonItem = item;
+        self.navigationItem.leftBarButtonItems = btnArray;
     }else{
-        self.navigationItem.rightBarButtonItem = item;
+        self.navigationItem.rightBarButtonItems = btnArray;
     }
-    
 }
+
+
 
 
 -(void)addBackBtnTarget:(id)target action:(SEL)action
 {
-    
-    [self addNavBtnImage:@"nav_back_black" target:target action:action isLeft:YES];
-    
+    [self addNavBtnImages:@[@"nav_back_black"] target:target action:action isLeft:YES];
 }
 
 

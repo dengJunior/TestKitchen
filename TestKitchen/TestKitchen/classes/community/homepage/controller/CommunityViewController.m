@@ -13,6 +13,8 @@
 #import "CommunityRecommendModel.h"
 #import "CommunityRecommendView.h"
 #import "CommunityFollowView.h"
+#import "MainTabBarController.h"
+#import "AppDelegate.h"
 
 @interface CommunityViewController ()<KTCSegmentCtrlDelegate,UIScrollViewDelegate>
 
@@ -41,6 +43,26 @@
 @end
 
 @implementation CommunityViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //显示tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar showTabBar];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    //隐藏tabBar
+    AppDelegate *appDele = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    MainTabBarController *mainTabBar = (MainTabBarController *)appDele.window.rootViewController;
+    [mainTabBar hideTabBar];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
