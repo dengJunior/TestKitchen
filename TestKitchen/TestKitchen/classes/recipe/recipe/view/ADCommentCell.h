@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 - (IBAction)clickBtn:(id)sender;
 
+
+
 //显示数据
 - (void)configModel:(ADCommentDataDetailModel *)model;
 

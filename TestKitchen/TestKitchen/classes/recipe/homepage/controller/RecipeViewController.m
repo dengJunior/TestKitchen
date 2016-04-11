@@ -18,6 +18,8 @@
 #import "ADDetailViewController.h"
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "SearchViewController.h"
+#import "FoodMatchViewController.h"
 
 @interface RecipeViewController ()<UIScrollViewDelegate,KTCSegmentCtrlDelegate>
 
@@ -256,6 +258,13 @@
         }else if (type == LinkTypeFoodCourseSerial){
             //视频课程
             [ws gotoFoodCoursePage:urlString];
+        }else if (type == LinkTypeSearch){
+            //搜索
+            [ws gotoSearchPage];
+            
+        }else if (type == LinkTypeFoodMatch) {
+            //食材搭配
+            [ws gotoFoodMatchPage];
         }
         
     };
@@ -269,6 +278,28 @@
 }
 
 #pragma mark - 界面跳转
+
+
+//食材搭配
+- (void)gotoFoodMatchPage
+{
+    FoodMatchViewController *fCtrl = [[FoodMatchViewController alloc] init];
+    fCtrl.materialModel = self.materialModel;
+    
+    [self.navigationController pushViewController:fCtrl animated:YES];
+    
+    
+}
+
+//搜索
+- (void)gotoSearchPage
+{
+    SearchViewController *sCtrl = [[SearchViewController alloc] init];
+    
+    [self.navigationController pushViewController:sCtrl animated:YES];
+}
+
+//
 
 //视频播放
 - (void)playVideo:(NSString *)urlString

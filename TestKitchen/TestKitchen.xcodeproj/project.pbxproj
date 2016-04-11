@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0846BD1CBBA9B500144031 /* pull@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846BB1CBBA9B500144031 /* pull@3x.png */; };
+		4E0846BE1CBBA9B500144031 /* push@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846BC1CBBA9B500144031 /* push@3x.png */; };
+		4E0846C31CBBBD7400144031 /* FoodMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0846C21CBBBD7400144031 /* FoodMatchViewController.m */; };
+		4E0846C61CBBBE7800144031 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0846C51CBBBE7800144031 /* SearchViewController.m */; };
+		4E0846CA1CBBC1F100144031 /* FoodMatchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0846C81CBBC1F100144031 /* FoodMatchCell.m */; };
+		4E0846CB1CBBC1F100144031 /* FoodMatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846C91CBBC1F100144031 /* FoodMatchCell.xib */; };
+		4E0846CE1CBBC81600144031 /* ArrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846CC1CBBC81600144031 /* ArrowLeft@3x.png */; };
+		4E0846CF1CBBC81600144031 /* ArrowRight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846CD1CBBC81600144031 /* ArrowRight@3x.png */; };
+		4E0846D11CBBC8E000144031 /* material_guide_bg03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0846D01CBBC8E000144031 /* material_guide_bg03.png */; };
 		4E1414551CB38615002DB02C /* DailyMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1414531CB38615002DB02C /* DailyMenuCell.m */; };
 		4E1414561CB38615002DB02C /* DailyMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1414541CB38615002DB02C /* DailyMenuCell.xib */; };
 		4E1414611CB3A951002DB02C /* RecommendSceneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E14145F1CB3A951002DB02C /* RecommendSceneCell.m */; };
@@ -213,6 +222,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E0846BB1CBBA9B500144031 /* pull@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pull@3x.png"; sourceTree = "<group>"; };
+		4E0846BC1CBBA9B500144031 /* push@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push@3x.png"; sourceTree = "<group>"; };
+		4E0846C11CBBBD7400144031 /* FoodMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodMatchViewController.h; sourceTree = "<group>"; };
+		4E0846C21CBBBD7400144031 /* FoodMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodMatchViewController.m; sourceTree = "<group>"; };
+		4E0846C41CBBBE7800144031 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		4E0846C51CBBBE7800144031 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		4E0846C71CBBC1F100144031 /* FoodMatchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodMatchCell.h; sourceTree = "<group>"; };
+		4E0846C81CBBC1F100144031 /* FoodMatchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodMatchCell.m; sourceTree = "<group>"; };
+		4E0846C91CBBC1F100144031 /* FoodMatchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMatchCell.xib; sourceTree = "<group>"; };
+		4E0846CC1CBBC81600144031 /* ArrowLeft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ArrowLeft@3x.png"; sourceTree = "<group>"; };
+		4E0846CD1CBBC81600144031 /* ArrowRight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ArrowRight@3x.png"; sourceTree = "<group>"; };
+		4E0846D01CBBC8E000144031 /* material_guide_bg03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = material_guide_bg03.png; sourceTree = "<group>"; };
 		4E1414521CB38615002DB02C /* DailyMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyMenuCell.h; sourceTree = "<group>"; };
 		4E1414531CB38615002DB02C /* DailyMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyMenuCell.m; sourceTree = "<group>"; };
 		4E1414541CB38615002DB02C /* DailyMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyMenuCell.xib; sourceTree = "<group>"; };
@@ -1449,6 +1470,8 @@
 			children = (
 				4E577BE21CB7CBF800C0A0D1 /* WebViewController.h */,
 				4E577BE31CB7CBF800C0A0D1 /* WebViewController.m */,
+				4E0846C41CBBBE7800144031 /* SearchViewController.h */,
+				4E0846C51CBBBE7800144031 /* SearchViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1482,6 +1505,8 @@
 			children = (
 				4E577C451CBAB71C00C0A0D1 /* ADDetailViewController.h */,
 				4E577C461CBAB71C00C0A0D1 /* ADDetailViewController.m */,
+				4E0846C11CBBBD7400144031 /* FoodMatchViewController.h */,
+				4E0846C21CBBBD7400144031 /* FoodMatchViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1510,6 +1535,9 @@
 				4E577C301CBAB29E00C0A0D1 /* ADDetailVideoCell.h */,
 				4E577C311CBAB29E00C0A0D1 /* ADDetailVideoCell.m */,
 				4E577C321CBAB29E00C0A0D1 /* ADDetailVideoCell.xib */,
+				4E0846C71CBBC1F100144031 /* FoodMatchCell.h */,
+				4E0846C81CBBC1F100144031 /* FoodMatchCell.m */,
+				4E0846C91CBBC1F100144031 /* FoodMatchCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1526,6 +1554,11 @@
 		4E577C011CB9010F00C0A0D1 /* foodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				4E0846D01CBBC8E000144031 /* material_guide_bg03.png */,
+				4E0846CC1CBBC81600144031 /* ArrowLeft@3x.png */,
+				4E0846CD1CBBC81600144031 /* ArrowRight@3x.png */,
+				4E0846BB1CBBA9B500144031 /* pull@3x.png */,
+				4E0846BC1CBBA9B500144031 /* push@3x.png */,
 				4E577C1D1CB9013500C0A0D1 /* icon_collect_p.png */,
 				4E577C1E1CB9013500C0A0D1 /* icon_collect.png */,
 				4E577C021CB9010F00C0A0D1 /* ico_share_white.png */,
@@ -1668,6 +1701,7 @@
 				4E1415551CB56488002DB02C /* 分享@3x.png in Resources */,
 				4E4765801CAFD982003147F5 /* RecommendADCell.xib in Resources */,
 				4E1414791CB3E34B002DB02C /* RecommendMasterCell.xib in Resources */,
+				4E0846D11CBBC8E000144031 /* material_guide_bg03.png in Resources */,
 				4E4765691CAF7597003147F5 /* mine_select@3x.png in Resources */,
 				4E1414621CB3A951002DB02C /* RecommendSceneCell.xib in Resources */,
 				4E577C201CB9013500C0A0D1 /* icon_collect.png in Resources */,
@@ -1677,6 +1711,7 @@
 				4E47656A1CAF7597003147F5 /* report_normal@2x.png in Resources */,
 				4E47655E1CAF7597003147F5 /* community_normal@2x.png in Resources */,
 				4E1415531CB56488002DB02C /* 分享_p@3x.png in Resources */,
+				4E0846CB1CBBC1F100144031 /* FoodMatchCell.xib in Resources */,
 				4E577C341CBAB29E00C0A0D1 /* ADCommentCell.xib in Resources */,
 				4E577C111CB9010F00C0A0D1 /* icon_like@2x.png in Resources */,
 				4E4765661CAF7597003147F5 /* mine_normal@2x.png in Resources */,
@@ -1700,12 +1735,14 @@
 				4E1414F91CB51742002DB02C /* CommunityTopicCell.xib in Resources */,
 				4E4765671CAF7597003147F5 /* mine_normal@3x.png in Resources */,
 				4E14155B1CB56488002DB02C /* agree_p@3x.png in Resources */,
+				4E0846BD1CBBA9B500144031 /* pull@3x.png in Resources */,
 				4E577C131CB9010F00C0A0D1 /* icon_play@2x.png in Resources */,
 				4E1415561CB56488002DB02C /* 评论_p@2x.png in Resources */,
 				4E47656D1CAF7597003147F5 /* report_select@3x.png in Resources */,
 				4E577C171CB9010F00C0A0D1 /* play-A@3x.png in Resources */,
 				4E47655F1CAF7597003147F5 /* community_normal@3x.png in Resources */,
 				4E1415521CB56488002DB02C /* 分享_p@2x.png in Resources */,
+				4E0846CF1CBBC81600144031 /* ArrowRight@3x.png in Resources */,
 				4E14155D1CB56488002DB02C /* agree@3x.png in Resources */,
 				4E577C1B1CB9010F00C0A0D1 /* search@2x.png in Resources */,
 				4E1415371CB5555E002DB02C /* MJRefresh.bundle in Resources */,
@@ -1713,6 +1750,7 @@
 				4E4765701CAF7597003147F5 /* shike_select@2x.png in Resources */,
 				4E4765721CAF7597003147F5 /* shop_normal@2x.png in Resources */,
 				4E4765641CAF7597003147F5 /* home_select@2x.png in Resources */,
+				4E0846CE1CBBC81600144031 /* ArrowLeft@3x.png in Resources */,
 				4E1415571CB56488002DB02C /* 评论_p@3x.png in Resources */,
 				4E14155A1CB56488002DB02C /* agree_p@2x.png in Resources */,
 				4E1414F21CB50791002DB02C /* 达人.png in Resources */,
@@ -1731,6 +1769,7 @@
 				4E4765851CAFDA0E003147F5 /* RecommendLikeCell.xib in Resources */,
 				4E47656F1CAF7597003147F5 /* shike_normal@3x.png in Resources */,
 				4E1415451CB55F7D002DB02C /* 举报.png in Resources */,
+				4E0846BE1CBBA9B500144031 /* push@3x.png in Resources */,
 				4E1415581CB56488002DB02C /* 评论@2x.png in Resources */,
 				4E14146C1CB3BFAB002DB02C /* RecommendSoupCell.xib in Resources */,
 				4E47656B1CAF7597003147F5 /* report_normal@3x.png in Resources */,
@@ -1760,6 +1799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4765051CAEAC9C003147F5 /* View+MASAdditions.m in Sources */,
+				4E0846C31CBBBD7400144031 /* FoodMatchViewController.m in Sources */,
 				4E4764CF1CAEAC71003147F5 /* JSONHTTPClient.m in Sources */,
 				4E4764DF1CAEAC71003147F5 /* UIImage+WebP.m in Sources */,
 				4E577C431CBAB31D00C0A0D1 /* ADCommentModel.m in Sources */,
@@ -1790,6 +1830,7 @@
 				4E4765061CAEAC9C003147F5 /* ViewController+MASAdditions.m in Sources */,
 				4E4765001CAEAC9C003147F5 /* MASLayoutConstraint.m in Sources */,
 				4E1415341CB5555E002DB02C /* MJRefreshGifHeader.m in Sources */,
+				4E0846C61CBBBE7800144031 /* SearchViewController.m in Sources */,
 				4E4764D21CAEAC71003147F5 /* JSONValueTransformer.m in Sources */,
 				4E1414E11CB4F66B002DB02C /* CommunityNewsView.m in Sources */,
 				4E47645E1CAEA61C003147F5 /* ViewController.m in Sources */,
@@ -1855,6 +1896,7 @@
 				4E4764DC1CAEAC71003147F5 /* UIButton+WebCache.m in Sources */,
 				4E4765781CAF7BC3003147F5 /* RecommendModel.m in Sources */,
 				4E577C361CBAB29E00C0A0D1 /* ADDetailSerialCell.m in Sources */,
+				4E0846CA1CBBC1F100144031 /* FoodMatchCell.m in Sources */,
 				4E4764DE1CAEAC71003147F5 /* UIImage+MultiFormat.m in Sources */,
 				4E4765031CAEAC9C003147F5 /* NSArray+MASAdditions.m in Sources */,
 				4E4764D71CAEAC71003147F5 /* SDWebImageDecoder.m in Sources */,
@@ -2001,6 +2043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestKitchen/classes/util/Kitchen.pch";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2013,6 +2056,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestKitchen/classes/util/Kitchen.pch";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

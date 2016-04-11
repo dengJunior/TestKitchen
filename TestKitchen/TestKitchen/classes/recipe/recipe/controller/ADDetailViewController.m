@@ -47,7 +47,7 @@
 {
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.tbView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64) style:UITableViewStylePlain];
+    self.tbView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenW, kScreenH-64) style:UITableViewStylePlain];
     self.tbView.dataSource = self;
     self.tbView.delegate = self;
     //设置背景颜色

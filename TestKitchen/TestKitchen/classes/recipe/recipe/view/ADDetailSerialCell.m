@@ -63,7 +63,7 @@
         
         //点击事件
         [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
-        btn.titleLabel.text = [NSString stringWithFormat:@"%d", i];
+        btn.titleLabel.text = [NSString stringWithFormat:@"%d", i+1];
         [self.contentView addSubview:btn];
     }
     

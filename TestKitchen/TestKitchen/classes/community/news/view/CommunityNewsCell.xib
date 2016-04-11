@@ -19,13 +19,12 @@
                             <constraint firstAttribute="height" constant="160" id="O99-Pz-Lau"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8un-Gg-aBb" userLabel="userBtn">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8un-Gg-aBb" userLabel="userBtn">
                         <rect key="frame" x="10" y="170" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="55a-iM-C2S"/>
                             <constraint firstAttribute="height" constant="40" id="HKY-0w-Fth"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
                         <connections>
                             <action selector="clickUserBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="z8G-z0-UKE"/>
                         </connections>

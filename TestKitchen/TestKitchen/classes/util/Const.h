@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, LinkType){
     LinkTypeUser,                        //用户详情
     LinkTypeMarrow,                      //精选作品
     LinkTypeTopic,                       //专题
+    LinkTypeSearch,                      //搜索
 };
 
 
@@ -71,7 +72,6 @@ typedef NS_ENUM(NSInteger, LinkType){
 //新手入门
 
 //食材搭配
-//http://api.izhangchu.com/?appVersion=4.3.2&sysVersion=9.2.1&devModel=iPhone
 //material_ids=45%2C47&methodName=SearchMix&page=1&size=10&token=8ABD36C80D1639D9E81130766BE642B7&user_id=1386387&version=4.32
 //material_ids=45%2C47&methodName=SearchMix&page=2&size=10&token=8ABD36C80D1639D9E81130766BE642B7&user_id=1386387&version=4.32
 

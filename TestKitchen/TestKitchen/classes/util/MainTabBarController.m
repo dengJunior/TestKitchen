@@ -25,6 +25,7 @@
     [self createViewControllers];
     
     //自定制tabbar
+    self.tabBar.hidden = YES;
     [self createMyTabbar];
 }
 
@@ -122,7 +123,7 @@
 -(void)hideTabBar
 {
     __weak typeof(self) weakSelf = self;
-    [UIView animateWithDuration:0.05 animations:^{
+    [UIView animateWithDuration:0.01 animations:^{
         weakSelf.bgTabView.hidden = YES;
     }];
 }
@@ -130,7 +131,7 @@
 -(void)showTabBar
 {
     __weak typeof(self) weakSelf = self;
-    [UIView animateWithDuration:0.05 animations:^{
+    [UIView animateWithDuration:0.01 animations:^{
         weakSelf.bgTabView.hidden = NO;
     }];
 }

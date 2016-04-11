@@ -37,6 +37,17 @@
 }
 
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    
+    if (self.clickBlock) {
+        self.clickBlock(nil, nil, LinkTypeSearch);
+    }
+    
+    return NO;
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

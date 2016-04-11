@@ -217,7 +217,7 @@
      */
     
     LikeHeaderView *headerView = [[LikeHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 44)];
-
+    headerView.clickBlock = self.clickBlock;
     
     return headerView;
 }

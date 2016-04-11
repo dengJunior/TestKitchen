@@ -24,12 +24,12 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         //标题
         self.titleLabel = [KTCUtil createLabelText:nil font:[UIFont systemFontOfSize:17] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentLeft];
-        self.titleLabel.frame = CGRectMake(20, 0, 200, 20);
+        self.titleLabel.frame = CGRectMake(20, 20, 200, 20);
         
         [self.contentView addSubview:self.titleLabel];
         //描述
         self.descLabel = [KTCUtil createLabelText:nil font:[UIFont systemFontOfSize:14] textColor:[UIColor lightGrayColor] textAlignment:NSTextAlignmentLeft];
-        self.descLabel.frame = CGRectMake(20, 30, kScreenW-20*2, 0);
+        self.descLabel.frame = CGRectMake(20, 50, kScreenW-20*2, 0);
         
         [self.contentView addSubview:self.descLabel];
     }
@@ -39,7 +39,7 @@
 //计算行高
 + (CGFloat)heightWithModel:(ADDetailDataCourseModel *)model
 {
-    CGFloat h = 30;
+    CGFloat h = 20+30;
     /*
      第一个参数:文字显示的最大范围
      第二个参数:文字的显示方式
