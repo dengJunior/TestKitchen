@@ -22,6 +22,8 @@
     MainTabBarController *tabCtrl = [[MainTabBarController alloc] init];
     self.window.rootViewController = tabCtrl;
     
+    //fsfsd
+    
     return YES;
 }
 
